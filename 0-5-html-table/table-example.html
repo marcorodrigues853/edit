@@ -16,6 +16,7 @@
       background-color: #cc8686;
       box-sizing: border-box;
       font-family: 'Noto Sans Display', sans-serif;
+
       height: 100%;
       display: flex;
       align-items: center;
@@ -51,7 +52,7 @@
       color: #fff;
       margin-bottom: 1rem;
     }
-    .selected {
+    .active {
       background-color: rgb(112, 96, 186);
       color: #fff;
       border-radius: 9px;
@@ -105,7 +106,7 @@
           </tr>
           <tr>
             <td>15</td>
-            <td class="selected">16</td>
+            <td>16</td>
             <td>17</td>
             <td>18</td>
             <td>19</td>
@@ -130,4 +131,12 @@
       </table>
     </div>
   </body>
+  <script>
+    let today = new Date().getDate()
+    let days = document.querySelectorAll('td')
+
+    days.forEach((day) => {
+      day.innerHTML == today ? day.classList.add('active') : null
+    })
+  </script>
 </html>
