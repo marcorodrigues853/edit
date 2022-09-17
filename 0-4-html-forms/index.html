@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Forms</title>
+  </head>
+  <body style="background-color: #7a957c">
+    <!-- O truque para um bom formulário, é a organização, começa aqui o teu. -->
+    <!-- O exemplo é o ficheiro sample -->
+    <div>
+      <label for="name">name</label>
+      <input type="text" id="name" name="name" />
+    </div>
+
+    <div>
+      <label for="ast-name">last name</label>
+      <input type="text" id="last-name" name="last-name" />
+    </div>
+
+    <div>
+      <label for="age">age</label>
+      <input type="number" id="age" name="age" />
+    </div>
+
+    <div>
+      <label for="date">date</label>
+      <input type="date" id="date" name="date" />
+    </div>
+
+    <div>
+      <label for="">Country</label>
+      <select id="country">
+        <optgroup>
+          <option value="PT">Portugal</option>
+          <option value="US">USA</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <div>
+      <label for="comment">Comments</label>
+      <textarea
+        cols="40"
+        rows="10"
+        id="comment"
+        name="comment"
+        placeholder="Fill your comment"
+      ></textarea>
+    </div>
+
+    <button class="submit">Submit</button>
+  </body>
+</html>
