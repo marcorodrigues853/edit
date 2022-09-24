@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final HTML</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+      .html {
+        font-size: 62.5%;
+      }
+      .container {
+        margin: 2rem 10rem;
+        font-size: 0.8rem;
+      }
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .menu__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+      .logo {
+        height: 2rem;
+      }
+
+      .btn {
+        border-radius: 9px;
+        border: none;
+        color: #fff;
+        padding: 0.5rem;
+      }
+
+      .btn--green {
+        background-color: #4ebe97;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+        text-transform: uppercase;
+      }
+
+      .btn--blue {
+        background-color: rgb(63, 63, 197);
+      }
+      .title-color-yellow {
+        color: #f9dd00;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+
+      .input-gray {
+        border: none;
+        background-color: rgb(238, 233, 233);
+        font-size: 0.7rem;
+        padding: 0.4rem;
+      }
+
+      .topics--list {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        /* justify-content: space-around; */
+      }
+      a {
+        text-decoration: none;
+      }
+      a:visited,
+      a:hover {
+      }
+
+      .grid {
+        display: grid;
+        column-gap: 2rem;
+        row-gap: 4rem;
+      }
+
+      .grid--2-cols {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .service-links {
+        display: flex;
+        justify-content: space-around;
+        gap: 0.5rem;
+      }
+      .service-link {
+        text-transform: lowercase;
+        background-color: #19a675;
+        color: #fff;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+        border-radius: 30px;
+      }
+      .contacts {
+        margin-top: 1rem;
+      }
+      .contacts-forms {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-space-around;
+        gap: 0.5rem;
+      }
+      .text-small {
+        font-size: 12px;
+      }
+      .contacts-links {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .checkbox-cta {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <!--  Mostra-me aqui as tuas páginas amarelas -->
+    <!-- Lembra-te que a semantica importa.
+        Cabeça, Tronco e Membros aka nav, main, section, etc...
+    -->
+    <header>
+      <nav class="menu">
+        <img src="assets/850.svg" alt="logo" class="logo" />
+        <div class="menu__list">
+          <a href="" class="menu__list-item">Empresa</a>
+          <a href="" class="menu__list-item">Serviços</a>
+          <a href="" class="menu__list-item">Soluções</a>
+          <a href="">Blog</a>
+          <a href="">Contactos</a>
+
+          <button type="button" class="btn btn--green">
+            Páginas Amarelas MarketPlace
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section id="about-us">
+      <h1 class="title-color-yellow">SOBRE NÓS</h1>
+      <p>
+        Estamos no mercado há mais de sessenta anos e temos a experiência e o
+        know-how necessários para desenvolver e implementar soluções que
+        acrescem valor a qualquer empresa, independentemente do volume e da área
+        de atividade. A nossa equipa de especialistas está focada no sucesso dos
+        nossos clientes, ajudando-os a identificar oportunidades de negócio e a
+        explorar todas as vertentes do marketing digital para que a estratégia
+        online seja sólida e eficaz.
+      </p>
+      <div class="topics--list">
+        <div class="about-us__topic">
+          <h3>Missão</h3>
+          <ul class="about-us__topic__list">
+            <li>Democratizamos o marketing digital</li>
+            <li>Aproximamos Empresas e Consumidor, em todo o mundo</li>
+            <li>Formamos digital experts para serem referência no mercado</li>
+          </ul>
+        </div>
+        <div class="about-us__topic">
+          <h3>Visão</h3>
+          <ul class="about-us__topic__list">
+            <li>
+              Ser o melhor aliado das empresas na ampliação dos seus negócios
+            </li>
+            <li>
+              Ser top of mind na procura de serviços e produtos, acrescentando
+              velocidade e valor
+            </li>
+            <li>Ser a escola de Vendas & Marketing Digital em Portugal.</li>
+          </ul>
+        </div>
+      </div>
+      <section class="services">
+        <h3 class="title-color-yellow">Serviços</h3>
+        <div class="service-links">
+          <a href="#" class="service-link">SERVIÇOS</a>
+          <a href="#" class="service-link">WEBSITE & ADDONS</a>
+          <a href="#" class="service-link">REDES SOCIAIS</a>
+          <a href="#" class="service-link">PUBLICIDADE ONLINE</a>
+          <a href="#" class="service-link">GEO MARKETING</a>
+          <a href="#" class="service-link">FOTOGRAFIA</a>
+          <a href="#" class="service-link">VÍDEO</a>
+          <a href="#" class="service-link">IDENTIDADE VISUAL</a>
+          <a href="#" class="service-link">OFFICE 365</a>
+          <a href="#" class="service-link">MARKETPLACE</a>
+        </div>
+
+        <button type="button" class="btn btn--green">
+          SABER MAIS SOBRE ESTE SERVIÇO
+        </button>
+      </section>
+    </section>
+
+    <section class="contacts">
+      <div class="grid grid--2-cols">
+        <div class="contacts-details">
+          <h3 class="title-color-yellow">Contactos</h3>
+          <strong>Estamos aqui para ajudar, fale connosco!:)</strong>
+          <p>
+            Ligue para
+            <strong
+              ><a href="tel:808-210-220" class="contacts-links"
+                >808 210 220</a
+              ></strong
+            >. Segunda a Sexta das 9h às 13h e das 14h às 18h.
+          </p>
+          <p>
+            Ou envie um e-mail para
+            <a href="mailto:pa@paginasamarelas.pt">pa@paginasamarelas.pt</a>
+          </p>
+        </div>
+        <div class="contacts-forms">
+          <h3>
+            <strong>Envia-nos uma mensagem</strong>
+          </h3>
+
+          <input
+            class="input-gray"
+            id="name"
+            type="text"
+            placeholder="Nome*"
+            name="name"
+          />
+          <input
+            class="input-gray"
+            id="phone"
+            type="phone"
+            placeholder="Telefone*"
+            name="phone"
+          />
+          <input
+            class="input-gray"
+            id="mail"
+            type="email"
+            placeholder="Mail*"
+            name="phone"
+          />
+          <input
+            class="input-gray"
+            id="NIF"
+            type="number"
+            placeholder="NIF*"
+            name="NIF"
+          />
+          <select class="input-gray" name="job">
+            <option value="carpinteiros" selected>Carpinteiros</option>
+            <option value="serralheiros">Serralheiros</option>
+          </select>
+          <textarea
+            class="input-gray"
+            rows="6"
+            placeholder="Escreva aqui a sua mensagem"
+          ></textarea>
+          <div class="checkbox-cta">
+            <input type="checkbox" id="comunication" name="comunication" />
+            <label for="comunication" class="text-small"
+              >Texto para o Checkbox Comunicações: "Quero receber comunicações
+              da Páginas Amarelas"</label
+            >
+          </div>
+          <div class="checkbox-cta">
+            <input type="checkbox" id="rgpd" name="rgpd" />
+            <label for="rgpd" class="text-small">
+              Texto para o Checkbox Comunicações: "Li e concordo com a Política
+              de Privacidade da Páginas Amarelas"
+            </label>
+          </div>
+          <button type="submit" class="btn btn--blue">Enviar</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

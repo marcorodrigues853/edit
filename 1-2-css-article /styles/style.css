@@ -1,0 +1,77 @@
+.body {
+  margin: 0 auto;
+  max-width: 50%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+h1 {
+  align-self: center;
+}
+
+h3 {
+  align-self: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(165, 165, 165);
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  color: rgb(181, 181, 181);
+}
+.btn--active {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5em 1rem;
+}
+
+.dark-background {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 9px;
+}
+.text-yellow {
+  color: yellow;
+}
+
+p,
+li {
+  max-width: 76ch;
+}
+
+.related-topics {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+}
+.article {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.article-details {
+}
