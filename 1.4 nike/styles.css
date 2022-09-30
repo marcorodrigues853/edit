@@ -1,0 +1,166 @@
+@import url(‘https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;1,500&display=swap’);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  font-size: 1rem;
+  font-family: 'IBM+Plex+Sans', sans-serif;
+}
+
+.container {
+  background: linear-gradient(0.25turn, #e66465, #9198e5);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 1.5rem 0;
+}
+
+.text {
+  padding: 1rem;
+}
+.card {
+  /* padding: 1rem; */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  box-shadow: inset 0.2rem rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  width: 550px;
+  border-radius: 20px;
+  animation: rotation 6s infinite linear;
+}
+
+.card__header-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.card__inside {
+  border-radius: 20px 20px 0 0;
+  background: rgb(36, 17, 0);
+  background: linear-gradient(
+    22deg,
+    rgba(36, 17, 0, 1) 0%,
+    rgba(157, 67, 16, 1) 28%,
+    rgba(255, 113, 0, 1) 100%
+  );
+}
+.card__header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: orangered; */
+}
+
+.card__description {
+  /* background-color: orangered; */
+}
+
+.nice-image {
+  position: relative;
+}
+.text__container {
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  padding: 1rem;
+}
+
+.btn {
+  border: none;
+  background-color: #fff;
+  color: rgb(123, 133, 244);
+  outline: 3px solid rgb(123, 133, 244);
+  padding: 1rem 4rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  z-index: 999;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: rgb(123, 133, 244);
+  color: #fff;
+  cursor: pointer;
+}
+
+.paragraph {
+  font-size: 1.4rem;
+}
+span {
+  display: block;
+  color: #99999972;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  letter-spacing: 0.8rem;
+}
+
+.text-big {
+  letter-spacing: 1rem;
+  margin: -2rem;
+  font-size: 22rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.1);
+  padding-top: 3rem;
+  left: -50px;
+}
+
+.shoe-img {
+  position: absolute;
+  top: 0;
+  right: -100px;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 2rem;
+  margin: auto;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(7deg);
+  }
+  22% {
+    transform: rotate(7deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  52% {
+    transform: rotate(0deg);
+  }
+  72% {
+    transform: rotate(-7deg);
+  }
+  75% {
+    transform: rotate(-7deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

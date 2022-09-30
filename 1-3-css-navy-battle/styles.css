@@ -1,0 +1,100 @@
+html,
+body {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.board {
+  border: 1px solid gainsboro;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.cell {
+  border: 1px dashed gainsboro;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.target {
+  background-color: gainsboro;
+  position: relative;
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  border: 1px solid transparent;
+  background: slateblue;
+  position: absolute;
+  margin: 10px;
+  border-radius: 100%;
+}
+
+/* .board > .target::before {
+  width: 20px;
+  height: 20px;
+  background: red;
+  position: absolute;
+  margin: 10px;
+  border-radius: 100%;
+  content: '';
+  top: 0px;
+  left: 0px;
+} */
+
+pre {
+  display: inline;
+}
+
+/* Coloca o teu CSS a partir daqui */
+.ball-0 {
+  left: calc(40px * 9);
+}
+
+.ball-1 {
+  left: calc(40px * 3);
+}
+
+.ball-2 {
+  left: calc(40px * 4);
+}
+
+.ball-3 {
+  left: calc(40px * 2);
+}
+
+.ball-4 {
+  left: calc(40px * 6);
+}
+
+.ball-5 {
+  left: calc(40px * 2);
+}
+
+.ball-6 {
+  left: calc(40px * 3);
+  top: calc(40px * 4);
+}
+
+.ball-7 {
+  left: calc(40px * 6);
+  top: calc(40px * 6);
+}
+
+.ball-8 {
+  left: calc(40px);
+  top: calc(40px * 2);
+}
+
+.ball-9 {
+  left: calc(40px * 3);
+  top: calc(40px * 2);
+}
+
+.ball-10 {
+}
