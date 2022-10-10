@@ -1,0 +1,104 @@
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Graphik, -apple-system, system-ui, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+// button type
+.btn{
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+
+&--big{
+  padding: 0.7rem 1.5rem;
+
+}
+&--small{
+  padding: 0.5rem 1.5rem;
+
+}
+
+&--outline{
+    background-color: #fff;
+    border: 1px solid;
+    padding: 0.7rem 1.5rem;
+
+}
+
+
+}
+
+
+// colors btn
+.btn{
+  &--color{
+    &-light{
+        background-color: #d2cccc;
+      }
+    &-primary{
+      background-color: #1652F0;
+    }
+    &-success{
+      background-color: #14cf3c;
+    }
+    &-warning{
+      background-color: #cf1414;
+    }
+    &-danger{
+      background-color: #dbac2b;
+    }
+  }
+
+
+}
+
+
+// Outline buttons
+.btn{
+  &-outline{
+    &-color{
+      &-light {
+    border-color: #d2cccc;
+    color: #d2cccc;
+  }
+
+  &-primary {
+    border-color: #1652f0;
+    color: #1652f0;
+  }
+  &-success {
+    border-color: #14cf3c;
+    color: #14cf3c;
+  }
+  &-danger {
+    border-color: #cf1414;
+    color: #cf1414;
+  }
+  &-warning {
+    border-color: #dbac2b;
+    color: #dbac2b;
+  }
+}}
+
+}
+
+.buttons__wrapper {
+  width: 500px;
+  margin: 16px auto;
+}
+
+
+.d-flex {
+  display: flex;
+  gap: 12px;
+}
