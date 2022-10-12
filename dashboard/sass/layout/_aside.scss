@@ -1,0 +1,46 @@
+// ASIDE MENU
+aside {
+  padding: 3.1rem;
+  background-color: #fff;
+  height: 100vh;
+  width: 296px;
+}
+
+.aside-header__logo {
+  display: flex;
+  align-items: center;
+  &-text {
+    font-size: 2rem;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.6rem 2rem;
+  gap: 10px;
+  width: 23.3rem;
+  height: 56rem;
+
+  //! margin top provisory
+  margin-top: 3rem;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 16px, 20px, 16px, 20px;
+    background: #5570f1;
+    border-radius: 12px;
+
+    &-image {
+    }
+    &-text {
+      font-size: 1.4rem;
+      color: #999;
+    }
+    &-badge {
+    }
+    // 100% -225 flex grow;
+  }
+}

@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* change the box and paddings */
+}
+
+html {
+  font-size: 62.5%; // 10px per REM
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+}

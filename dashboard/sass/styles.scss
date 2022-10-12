@@ -1,0 +1,33 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+//  base
+@import 'base/base';
+@import 'base/colors';
+@import 'base/animations';
+@import 'base/typography';
+
+// abstract
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+// components
+@import 'components/button';
+@import 'components/card';
+@import 'components/form';
+
+// pages
+@import 'pages/dashboard';
+@import 'pages/login';
+
+// partials
+@import 'partials/typography';
+@import 'partials/colors';
+
+// layouts
+@import 'layout/grid';
+@import 'layout/aside';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/navigation';

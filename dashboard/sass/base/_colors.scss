@@ -1,0 +1,108 @@
+// COLORS
+
+$primary: (
+  '10': #dbdeee,
+  '20': #c4cae8,
+  '30': #b6bfe8,
+  '40': #abb5e9,
+  '50': #97a5eb,
+  '60': #8899e9,
+  '70': #7c8fec,
+  '80': #6d83ec,
+  '90': #6078ec,
+  '100': #5570f1,
+);
+
+$secondary: (
+  '10': #fef9f2,
+  '20': #fef5ea,
+  '30': #fff2e2,
+  '40': #fff0de,
+  '50': #ffead1,
+  '60': #ffe5c8,
+  '70': #ffdfba,
+  '80': #ffdaae,
+  '90': #ffd29e,
+  '100': #ffcc91,
+);
+
+$black: (
+  '10': #bec0ca,
+  '20': #a6a8b1,
+  '30': #8b8d97,
+  '40': #6e7079,
+  '50': #53545c,
+  '60': #45464e,
+  '70': #37393f,
+  '80': #33343a,
+  '90': #2c2d33,
+  '100': #1c1d22,
+);
+
+// each to create  classes for colors
+@each $name, $value in $primary {
+  .bg-primary-#{$name} {
+    background-color: $value;
+  }
+  .text-primary-#{$name} {
+    color: $value;
+  }
+}
+@each $name, $value in $secondary {
+  .bg-secondary-#{$name} {
+    background-color: $value;
+  }
+  .text-secondary-#{$name} {
+    color: $value;
+  }
+}
+@each $name, $value in $black {
+  .bg-black-#{$name} {
+    background-color: $value;
+  }
+  .text-black-#{$name} {
+    color: $value;
+  }
+}
+
+// global colors
+
+$success: #519c66;
+$warning: #cc5f5f;
+$gray: #e1e2e9;
+$main-background: #f4f5fa;
+$white: #ffffff;
+$stroke: #f1f3f9;
+
+// Text colors
+
+.text {
+  &-white {
+    color: $white;
+  }
+  &-gray {
+    color: $gray;
+  }
+  &-success {
+    color: $success;
+  }
+  &-warning {
+    color: $warning;
+  }
+}
+
+// Background colors
+.bg {
+  &-white {
+    background-color: $white;
+  }
+  &-warning {
+    background-color: $warning;
+  }
+  &-success {
+    background-color: $success;
+  }
+  &-gray {
+    background-color: $gray;
+  }
+}
