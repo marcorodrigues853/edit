@@ -1,0 +1,49 @@
+@import './../base/colors';
+
+.login-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-header {
+  background-color: $white;
+  width: 100vw;
+  height: 7.6rem;
+  position: sticky;
+}
+
+.main-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-header {
+  padding: 4rem 8.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.input-login {
+  width: 100%;
+  gap: 1rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.recovery-password {
+  font-size: 1.4rem;
+  align-self: end;
+  color: #5570f1; // TODO: need to change to primary
+  text-decoration: none;
+}
+
+.signup {
+  text-decoration: none;
+  color: #8b8d97;
+  color: map-get($map: $black, $key: '30');
+
+  &-text {
+    color: inherit;
+  }
+}

@@ -1,0 +1,47 @@
+.label {
+  // TODO: /* Label 2/Regular */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  margin-top: 1rem;
+
+  &__circle {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+  }
+
+  &--primary-100 {
+    // TODO: /* Primary/100 */
+    background: #5570f1;
+  }
+  &--primary-50 {
+    // TODO: /* Primary/50 */
+    background: #97a5eb;
+  }
+  &--secondary-100 {
+    // TODO: /* Secondary/100 */
+    background: #ffcc91;
+    border-radius: 6px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+
+    // color: #a6a8b1; // TODO:  /* Black/20 */
+    color: map-get($map: $black, $key: '20');
+  }
+}
+
+.label-list {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

@@ -1,2 +1,35 @@
 .form {
+  &__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    // gap: 1rem;
+    background: rgba(239, 241, 249, 0.6);
+    width: 37.5rem;
+    height: 5.2rem;
+    padding: 1rem;
+  }
+  &__input {
+    border: none;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.6rem; // TODO: review 16px typography
+    color: inherit;
+    padding: 0.8rem 1.6rem 0.8rem 1.6rem;
+    // border-bottom: 3px solid transparent; // add invalid iput bootm bar
+    border-radius: 8px;
+    background: rgba(239, 241, 249, 0.6); // TODO: review color
+
+    // flex: 1;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.05rem rgba(99, 99, 99, 0.1);
+    }
+
+    &__icon {
+      &--end {
+        align-self: flex-end;
+      }
+    }
+  }
 }

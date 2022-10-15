@@ -17,29 +17,429 @@
         <span class="aside-header__logo-text">Metrix</span>
       </div>
 
+      <!-- Navigation -->
       <div class="nav">
-        <a href="http://" class="nav__item">
+        <a href="#" class="nav__item nav__item-active">
           <img
-            src="./assets/icon-dashboard.png"
+            src="./assets/Iconly/Light/Category.svg"
             class="nav__item-image"
             alt="dashboard icon"
           />
           <span class="nav__item-text">Dashboard</span>
-          <div class="nav__item-badge">badge</div>
+          <div class="nav__item-badge">3</div>
+        </a>
+
+        <!-- Anchor tests -->
+        <a href="#" class="nav__item">
+          <img
+            src="./assets/Iconly/Light/Bag.svg"
+            class="nav__item-image"
+            alt="dashboard icon"
+          />
+          <span class="nav__item-text">Orders</span>
+        </a>
+
+        <a href="#" class="nav__item">
+          <img
+            src="./assets/Iconly/Light/2-User.svg"
+            class="nav__item-image"
+            alt="dashboard icon"
+          />
+          <span class="nav__item-text">Customers</span>
+        </a>
+        <a href="#" class="nav__item">
+          <img
+            src="./assets/Iconly/Light/Folder.svg"
+            class="nav__item-image"
+            alt="dashboard icon"
+          />
+          <span class="nav__item-text">Inventory</span>
+        </a>
+
+        <a href="#" class="nav__item">
+          <img
+            src="./assets/Iconly/Light/Chat.svg"
+            class="nav__item-image"
+            alt="dashboard icon"
+          />
+          <span class="nav__item-text">Conversations</span>
+          <div class="nav__item-badge">16</div>
+        </a>
+
+        <a href="#" class="nav__item">
+          <img
+            src="./assets/Iconly/Light/Setting.svg"
+            class="nav__item-image"
+            alt="dashboard icon"
+          />
+          <span class="nav__item-text">Settings</span>
         </a>
       </div>
-
+      <!-- Aside Footer -->
       <div class="aside-footer">
-        <div class="support">support</div>
-        <div class="free-gift">free gift</div>
-        <button class="logout">logout</button>
+        <div class="menu__extra">
+          <div class="menu__extra-support btn btn--medium btn--round btn--grey">
+            <img src="./assets/icon-headphones.png" alt="headphones icon" />
+            support
+          </div>
+          <div
+            class="menu__extra-free-gift btn btn--round btn--big btn--yellow"
+          >
+            <div class="extra-free">
+              <img src="./assets/icon-gift.png" alt="headphones icon" />
+              <span> Free Gift Awaits You! </span>
+            </div>
+            <a href="#" class="span-free"
+              >upgrade your account
+              <img src="./assets/chevron-right.png" alt="logout icon"
+            /></a>
+          </div>
+        </div>
+        <button class="btn logout">
+          <img src="./assets/icon-logout.png" alt="logout icon" />
+          <span class="logout">Logout</span>
+        </button>
       </div>
     </aside>
 
     <!-- Main -->
     <main class="main">
-      <header class="header">HEADER</header>
-      <div class="container">container</div>
+      <header class="header">
+        <h1 class="heading-primary">Dashboard</h1>
+        <div class="member__area">
+          <img src="./assets/Iconly/Light/Notification.svg" alt="icon" />
+          <img src="./assets/profile.png" alt="Profile image" />
+        </div>
+      </header>
+      <div class="container">
+        <!-- 1st row -->
+        <div class="row">
+          <div class="col col-4">
+            <div class="card card">
+              <div class="card__header">
+                <img
+                  src="./assets/Iconly/Light/graph.svg"
+                  alt="user icon"
+                  class="card__header--icon bg-primary-30 text-primary-100"
+                />
+                <span class="card__header--title">This week</span>
+              </div>
+              <div class="card__body">
+                <div class="card__body__box">
+                  <span class="card__body__box-title">All Products</span>
+                  <span class="card__body__box-number">₦0.00</span>
+                </div>
+                <div class="card__body__box">
+                  <span class="card__body__box-title">Volume</span>
+                  <span class="card__body__box-number">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-4">
+            <div class="card">
+              <div class="card__header">
+                <img
+                  src="./assets/Iconly/Light/2-User.svg"
+                  alt=""
+                  class="card__header--icon bg-secondary-30"
+                />
+                <span class="card__header--title">This week</span>
+              </div>
+              <div class="card__body">
+                <div class="card__body__box">
+                  <span class="card__body__box-title">Customers</span>
+                  <span class="card__body__box-number">0</span>
+                </div>
+                <div class="card__body__box">
+                  <span class="card__body__box-title">Volume</span>
+                  <span class="card__body__box-number">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col-4">
+            <div class="card">
+              <div class="card__header">
+                <img
+                  src="./assets/Iconly/Light/Bag.svg"
+                  alt=""
+                  class="card__header--icon bg-secondary-30"
+                />
+                <span class="card__header--title">This week</span>
+              </div>
+              <div class="card__body">
+                <div class="card__body__box">
+                  <span class="card__body__box-title">All orders</span>
+                  <span class="card__body__box-number">0</span>
+                </div>
+                <div class="card__body__box">
+                  <span class="card__body__box-title">Pending</span>
+                  <span class="card__body__box-number">0</span>
+                </div>
+                <div class="card__body__box">
+                  <span class="card__body__box-title">Completed</span>
+                  <span class="card__body__box-number">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="col-8">
+              <div class="row">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="card">
+                        <div class="card__header">
+                          <span class="card__header--title">Marketing</span>
+                          <span class="card__header--title">This week</span>
+                        </div>
+                        <div class="card__body">
+                          <div class="chart">
+                            <div class="label-list">
+                              <div class="label">
+                                <span
+                                  class="label__circle label--primary-50"
+                                ></span>
+                                <span class="label__title">Purchase</span>
+                              </div>
+                              <div class="label">
+                                <span
+                                  class="label__circle label--primary-100"
+                                ></span>
+                                <span class="label__title">Retention</span>
+                              </div>
+                              <div class="label">
+                                <span
+                                  class="label__circle label--secondary-100"
+                                ></span>
+                                <span class="label__title">Acquisition</span>
+                              </div>
+                            </div>
+
+                            <div class="chart__rectangle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="col-12">
+                        <div class="card card--primary-100">
+                          <div class="card__header">
+                            <img
+                              src="./assets/Iconly/Light/Folder.svg"
+                              alt=""
+                              class="card__header--icon bg-primary-30"
+                            />
+                          </div>
+                          <div class="card__body">
+                            <div class="card__body__box">
+                              <span class="card__body__box-title text-white"
+                                >All Products</span
+                              >
+                              <span class="card__body__box-number text-white"
+                                >0</span
+                              >
+                            </div>
+                            <div class="card__body__box">
+                              <span class="card__body__box-title text-white"
+                                >Active</span
+                              >
+                              <span class="card__body__box-number text-white"
+                                >0</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card__header">
+                            <img
+                              src="./assets/Iconly/Light/fi_shopping-cart.svg"
+                              alt=""
+                              class="card__header--icon bg-secondary-30"
+                            />
+                            <span class="card__header--title">This week</span>
+                          </div>
+                          <div class="card__body">
+                            <div class="card__body__box">
+                              <span class="card__body__box-title text-warning"
+                                >Abandoned Carts</span
+                              >
+                              <span class="card__body__box-number">0</span>
+                            </div>
+                            <div class="card__body__box">
+                              <span class="card__body__box-title"
+                                >Customers</span
+                              >
+                              <span class="card__body__box-number">0</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card__header">
+                        <span class="card__body__box-title margin-right--1"
+                          >Summary</span
+                        >
+                        <select
+                          name="select-chart"
+                          id="select-chart"
+                          class="margin-right-auto"
+                        >
+                          <option value="sales">Sales</option>
+                          <option value="other">Amount</option>
+                          <option value="">Roi</option>
+                        </select>
+                        <span class="card__body__box-title">Last 7 Days</span>
+                      </div>
+
+                      <div class="card__body">
+                        <div class="chart__bar">
+                          <div class="axios-y">
+                            <span>100k</span>
+                            <span>80k</span>
+                            <span>60k</span>
+                            <span>40k</span>
+                            <span>20k</span>
+                          </div>
+                          <div class="chart__bar__list">
+                            <div class="chart__bar__list-box">
+                              <div class="chart__bar__list-item">
+                                <div class="chart__bar__list-item-fill"></div>
+                              </div>
+                              <span>Sept 10</span>
+                            </div>
+                            <div class="chart__bar__list-box">
+                              <div class="chart__bar__list-item">
+                                <div class="chart__bar__list-item-fill"></div>
+                              </div>
+                              <span>Sept 11</span>
+                            </div>
+                            <div class="chart__bar__list-box">
+                              <div class="chart__bar__list-item">
+                                <div class="chart__bar__list-item-fill"></div>
+                              </div>
+                              <span>Sept 12</span>
+                            </div>
+                            <div class="chart__bar__list-box">
+                              <div class="chart__bar__list-item">
+                                <div class="chart__bar__list-item-fill"></div>
+                              </div>
+                              <span>Sept 13</span>
+                            </div>
+                            <div class="chart__bar__list-box">
+                              <div class="chart__bar__list-item">
+                                <div class="chart__bar__list-item-fill"></div>
+                              </div>
+                              <span>Sept 14</span>
+                            </div>
+                            <div class="chart__bar__list-box">
+                              <div class="chart__bar__list-item">
+                                <div class="chart__bar__list-item-fill"></div>
+                              </div>
+                              <span>Sept 15</span>
+                            </div>
+                            <div class="chart__bar__list-box">
+                              <div class="chart__bar__list-item">
+                                <div class="chart__bar__list-item-fill"></div>
+                              </div>
+                              <span>Sept 15</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="card card--start">
+                <div class="card__header">
+                  <div class="order__title">Recent Orders</div>
+                </div>
+                <div class="card__body">
+                  <div class="order">
+                    <div class="order__list">
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span>Iphone 14</span>
+                            <span>N730,000.00 × 1</span>
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span>12 Sept 2022</span>
+                            <span class="badge badge-danger">Pending</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone1.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span>Iphone 14</span>
+                            <span>N730,000.00 × 1</span>
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span>12 Sept 2022</span>
+                            <span class="badge badge-success">Completed</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Origina version step 1 -->
+              <!-- <div class="card card--start">
+                <div class="card__header">
+                  <div class="order__title">Recent Orders</div>
+                </div>
+                <div class="card__body card__body--centered">
+                  <div class="order">
+                    <div class="no-order-icon">
+                      <img
+                        src="./assets/Iconly/Light/Bag-bulk.svg"
+                        alt="icon"
+                      />
+                    </div>
+
+                    <h2 class="heading-secondary text-centered">
+                      No Orders Yet?
+                    </h2>
+                    <h3 class="heading-tertiary text-centered">
+                      Add products to your store and start selling to see orders
+                      here.
+                    </h3>
+
+                    <a href="#" class="btn btn--round btn--primary">
+                      <img src="./assets/Iconly/Light/fi_plus.svg" alt="" /> New
+                      Product</a
+                    >
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

@@ -1,9 +1,14 @@
+body {
+  display: flex;
+}
+
 .container {
-  background-color: royalblue;
+  background-color: $main-background;
 }
 
 main {
-  background-color: royalblue;
+  background-color: $main-background;
   height: 100vh;
   flex-grow: 1;
+  overflow: scroll;
 }

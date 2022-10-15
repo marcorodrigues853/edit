@@ -1,46 +1,55 @@
 // ASIDE MENU
-aside {
+.aside {
   padding: 3.1rem;
   background-color: #fff;
   height: 100vh;
   width: 296px;
-}
-
-.aside-header__logo {
-  display: flex;
-  align-items: center;
-  &-text {
-    font-size: 2rem;
-  }
-}
-
-.nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 1.6rem 2rem;
-  gap: 10px;
-  width: 23.3rem;
-  height: 56rem;
+  justify-content: space-between;
 
-  //! margin top provisory
-  margin-top: 3rem;
-
-  &__item {
+  &-header__logo {
     display: flex;
     align-items: center;
-    padding: 16px, 20px, 16px, 20px;
-    background: #5570f1;
-    border-radius: 12px;
 
-    &-image {
-    }
     &-text {
-      font-size: 1.4rem;
-      color: #999;
+      font-size: 2rem;
+      font-weight: 700;
     }
-    &-badge {
-    }
-    // 100% -225 flex grow;
   }
+}
+
+.menu__extra {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu__extra-free-gift {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.extra-free {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout {
+  margin-left: -1rem; // padding is 2rem so middle it's 1rem
+  color: $warning;
+}
+
+.span-free {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: map-get($map: $black, $key: '40');
+}
+
+.aside-footer {
+  width: 100%;
 }

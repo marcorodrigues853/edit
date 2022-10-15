@@ -1,0 +1,96 @@
+@import './../base/colors';
+
+.card__login {
+  padding: 4.9rem 3.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  align-items: center;
+  border-radius: 12px;
+
+  background-color: $white;
+  // min-height: 1rem;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+// module
+//module > module__header + module__body + module__footer
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 14.5rem;
+  width: 100%;
+  background-color: $white;
+  border-radius: 12px;
+  padding: 1.5rem 1.1rem;
+  margin: 0.5rem;
+
+  &--start {
+    justify-content: flex-start;
+  }
+
+  &--primary-100 {
+    // TODO: /* Primary/100 */
+
+    background: #5570f1;
+    color: $white;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--icon {
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+    &--title {
+      color: map-get($map: $black, $key: '10');
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    &--centered {
+      align-self: center;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+    }
+    &__box {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+
+      &-title {
+        font-size: 1.4rem; // TODO:  change typography
+        color: map-get($map: $black, $key: '10');
+      }
+      &-number {
+        // TODO: need to change font family to font-family: 'Poppins'
+        font-size: 2rem;
+
+        color: map-get($map: $black, $key: '60');
+        line-height: 3rem;
+        font-weight: 500;
+      }
+    }
+  }
+}

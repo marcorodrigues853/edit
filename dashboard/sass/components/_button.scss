@@ -1,9 +1,73 @@
+@import './../base/colors';
+
 .btn {
-  &,
-  &:link,
-  &:visited {
+  border: 1px solid transparent;
+  display: flex;
+  gap: 1rem;
+  padding: 1.1rem 1.6rem 1.1rem 1.6rem;
+  background-color: transparent;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  // color: #1c1d22; // TODO: $text-black-100
+  color: map-get($map: $black, $key: '100');
+
+  // &,
+  // & a:link,
+  // a:visited {
+  //   text-decoration: none;
+  // }
+  // &a:active,
+  // a:hover {
+  //   text-decoration: dashed;
+  // }
+
+  //  button shapes
+  &--round {
+    border-radius: 16px;
   }
-  &:active,
-  &:hover {
+
+  // button sizes
+  &--small {
+  }
+  &--medium {
+    height: 4.6rem;
+  }
+  &--big {
+    height: 8.2rem;
+  }
+
+  &--login {
+    // padding: 5.8rem 18rem;
+    height: 5.8rem;
+    width: 18rem;
+    font-size: 2rem;
+    line-height: 24px;
+
+    margin: auto;
+  }
+
+  // align
+  &--center {
+    justify-content: center;
+  }
+  &--right {
+    justify-content: flex-end;
+  }
+
+  // button  colors
+  &--yellow {
+    background-color: rgb(255, 204, 145, 0.2); // TODO: review Cristian
+  }
+  &--grey {
+    background-color: rgb(94, 99, 102, 0.1); // TODO: review Cristian
+    //? padding: 11px, 16px, 11px, 16px;
+  }
+  &--primary {
+    background-color: #5570f1; // TODO: review Cristian
+    color: $white;
+    //? padding: 11px, 16px, 11px, 16px;
   }
 }

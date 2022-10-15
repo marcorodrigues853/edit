@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/styles.css" type="text/css" />
+    <title>Login dashboard</title>
+  </head>
+  <body class="login-body">
+    <header class="login-header">
+      <img src="./assets/logo.png" alt="logo" />
+    </header>
+
+    <main class="main-login">
+      <div class="card__login">
+        <div class="card__login__header">
+          <img src="./assets/logo.png" alt="logo" />
+          <h1 class="heading-primary">Welcome back!</h1>
+          <h3 class="heading-tertiary">Login to your account</h3>
+        </div>
+        <form action="#" class="input-login">
+          <div class="form__group">
+            <img
+              src="./assets/Iconly/Light/Message.svg"
+              class="form__icon"
+              alt="icon"
+            />
+
+            <input
+              type="text"
+              id="email"
+              class="input-email form__input"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="form__group">
+            <img
+              src="./assets/Iconly/Light/Lock.svg"
+              class="form__icon"
+              alt="icon"
+            />
+            <input
+              id="password"
+              type="password"
+              class="input-password form__input"
+              placeholder="Password"
+              required
+            />
+            <img
+              src="./assets/Iconly/Light/fi_eye-off.svg"
+              class="form__icon"
+              alt="icon--end"
+            />
+          </div>
+          <a href="#" class="recovery-password">Recover Password</a>
+        </form>
+        <div class="signup">
+          <span class="signup-text"> Don't have an account? </span>
+          <a href="#" class="">Sign Up</a>
+        </div>
+        <a class="btn btn--round btn--login btn--primary btn--center">Login</a>
+      </div>
+    </main>
+  </body>
+</html>

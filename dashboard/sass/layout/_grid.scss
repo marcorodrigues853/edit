@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 12px;
-  margin: 32px 0;
+  margin: 7rem 0 32px 0;
 }
 
 .row {
@@ -10,6 +10,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 %col {
   display: flex;
   flex-wrap: wrap;
@@ -18,12 +19,15 @@
 }
 
 $columns: 12;
+$gap: 1rem;
+
 @for $i from 1 through $columns {
   .col-#{$i} {
     @extend %col;
     width: calc(100% / $columns * $i);
+
     @media screen and (max-width: 768px) {
-      .col-#{$i} {
+      & {
         width: 100%;
       }
     }
