@@ -1,6 +1,16 @@
 header {
   background-color: $white;
 
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 3rem;
+
+  // TODO: review the color
+  color: #45464e;
+
+  z-index: 1000;
+
   display: flex;
   align-items: center;
   justify-content: space-between;

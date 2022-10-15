@@ -10,9 +10,9 @@
   &__title {
   }
 
-  overflow: hidden;
-  overflow-y: auto;
   &__list {
+    overflow: hidden;
+    overflow-y: auto;
     align-self: normal;
 
     display: flex;
@@ -21,20 +21,11 @@
     gap: 1.5rem;
 
     &-item {
-      &::before {
-        content: '';
-        height: 1px;
-        width: 100%;
-        background-color: red;
-        position: absolute;
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray;
+        padding-bottom: 1rem;
       }
-      // &:not(:first-child) {
-      //   // position: absolute;
-      //   height: 0.3rem;
-      //   width: 100%;
-      //   background-color: red;
-      //   align-self: center;
-      // }
+
       display: flex;
       justify-content: space-between;
 
@@ -43,6 +34,7 @@
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
+
         &-details {
           display: flex;
           flex-direction: column;

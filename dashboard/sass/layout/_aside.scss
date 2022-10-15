@@ -41,13 +41,23 @@
 .logout {
   margin-left: -1rem; // padding is 2rem so middle it's 1rem
   color: $warning;
+  display: flex;
+  gap: 2rem;
 }
 
 .span-free {
+  display: flex;
+  align-content: center;
+  gap: 1rem;
+
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-decoration: none;
   color: map-get($map: $black, $key: '40');
+
+  & > img {
+    align-self: center;
+  }
 }
 
 .aside-footer {

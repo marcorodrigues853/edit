@@ -1270,8 +1270,8 @@ body {
   width: 100%;
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 1.5rem 1.1rem;
-  margin: 0.5rem;
+  padding: 2rem 1.5rem;
+  margin: 1rem;
 }
 .card--start {
   justify-content: flex-start;
@@ -1310,6 +1310,8 @@ body {
 .card__body__box {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
 }
 .card__body__box-title {
   font-size: 1.4rem;
@@ -1358,9 +1360,9 @@ body {
   background-color: #eef0fa;
 }
 .chart__bar {
+  flex-grow: 1;
   padding: 2rem 0.5rem;
   display: flex;
-  flex-grow: 1;
 }
 .chart__bar__list {
   display: flex;
@@ -1390,9 +1392,42 @@ body {
   position: absolute;
   background: #5570f1;
   width: 1.3rem;
-  height: 9rem;
+  height: 5rem;
   bottom: 0;
   left: 0;
+}
+.chart__tree-map {
+  max-width: 100%;
+  display: flex;
+}
+.chart__tree-map__list {
+  display: flex;
+  align-items: center;
+  min-height: 20.8rem;
+  flex: 1 1 auto;
+}
+.chart__tree-map__list-item {
+  height: 100%;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000;
+  padding: 0.4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.chart__tree-map__list-item--lightblue {
+  width: 25%;
+  background: #5570f1;
+}
+.chart__tree-map__list-item--royalblue {
+  width: 25%;
+  background: #97a5eb;
+}
+.chart__tree-map__list-item--violet {
+  width: 50%;
+  background: #ffcc91;
 }
 
 select {
@@ -1434,10 +1469,10 @@ select {
   gap: 2rem;
   flex-grow: 1;
   max-height: 65rem;
-  overflow: hidden;
-  overflow-y: auto;
 }
 .order__list {
+  overflow: hidden;
+  overflow-y: auto;
   align-self: normal;
   display: flex;
   flex-direction: column;
@@ -1448,12 +1483,9 @@ select {
   display: flex;
   justify-content: space-between;
 }
-.order__list-item::before {
-  content: "";
-  height: 1px;
-  width: 100%;
-  background-color: red;
-  position: absolute;
+.order__list-item:not(:last-child) {
+  border-bottom: 1px solid #e1e2e9;
+  padding-bottom: 1rem;
 }
 .order__list-item__product {
   display: flex;
@@ -1980,13 +2012,21 @@ main {
 .logout {
   margin-left: -1rem;
   color: #CC5F5F;
+  display: flex;
+  gap: 2rem;
 }
 
 .span-free {
+  display: flex;
+  align-content: center;
+  gap: 1rem;
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-decoration: none;
   color: #6E7079;
+}
+.span-free > img {
+  align-self: center;
 }
 
 .aside-footer {
@@ -1995,6 +2035,12 @@ main {
 
 header {
   background-color: #FFFFFF;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: #45464e;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
