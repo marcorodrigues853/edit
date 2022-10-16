@@ -11192,7 +11192,7 @@ select {
   position: absolute;
   background: #5570f1;
   width: 1.3rem;
-  height: 13rem;
+  height: 19rem;
   bottom: 0;
   left: 0;
 }
@@ -11265,6 +11265,7 @@ select {
 .order__list-item {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .order__list-item:not(:last-child) {
   border-bottom: 1px solid #f1f3f9;
@@ -11283,6 +11284,10 @@ select {
   gap: 1rem;
 }
 
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+}
 .product-details__title {
   color: #45464e;
 }

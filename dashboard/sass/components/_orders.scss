@@ -25,6 +25,7 @@
 
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
 
       &__product {
         @include flex-center-vert;
@@ -42,6 +43,9 @@
 }
 
 .product-details {
+  display: flex;
+  flex-wrap: wrap;
+
   &__title {
     color: map-get($map: $black, $key: '60');
   }
@@ -63,11 +67,11 @@
 
 .no-order-icon {
   @include flex-center;
-
   padding: 7rem;
   margin-bottom: 3rem;
 
   font-family: var(--font-secondary);
+
   border-radius: 50%;
   background-color: $main-background;
   border: 1px solid $gray;
