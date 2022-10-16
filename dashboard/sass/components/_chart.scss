@@ -24,8 +24,7 @@
         align-items: center;
         gap: 1rem;
         color: map-get($map: $black, $key: '10');
-        font-size: 1.1rem;
-        line-height: 1.3rem;
+        @include font-size(11, 13);
       }
 
       &-item {
@@ -37,7 +36,6 @@
         overflow: hidden;
 
         &-fill {
-          $randomNumber: random(23);
           position: absolute;
           background: map-get($map: $primary, $key: '100');
           width: 1.3rem;
@@ -57,16 +55,17 @@
       min-height: 20.8rem;
       flex: 1 1 auto;
       &-item {
+        @include font-face(600);
+        @include font-size(11, 13);
+
         height: 100%;
-        font-weight: 600;
-        font-size: 1.1rem;
-        line-height: 1.3rem;
         color: $black-full;
         padding: 0.4rem;
 
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+
         &--lightblue {
           width: 25%;
           background: map-get($map: $primary, $key: '100');

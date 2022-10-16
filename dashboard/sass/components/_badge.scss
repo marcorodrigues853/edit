@@ -3,9 +3,7 @@
   border-radius: 8px;
   padding: 0.2rem 1.5rem;
 
-  // TODO: confirm font-size;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+  @include font-size(12, 15);
 
   &-success {
     background: rgba(50, 147, 111, 0.12);

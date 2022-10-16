@@ -27,7 +27,6 @@
 }
 
 .recovery-password {
-  font-size: 1.4rem;
   align-self: end;
   color: map-get($map: $primary, $key: '100');
   text-decoration: none;
@@ -41,6 +40,7 @@
     color: inherit;
   }
   & a {
+    text-decoration: none;
     color: map-get($map: $primary, $key: '100');
   }
 }

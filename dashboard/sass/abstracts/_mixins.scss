@@ -27,12 +27,15 @@
 
 // font face
 @mixin font-face($weight: 400, $family: var(--font-primary)) {
-  weight: $weight;
-  font-family: $family;
+  font-weight: $weight;
+  @if $family== var(--font-primary) {
+  } @else {
+    font-family: $family;
+  }
 }
 
 // font size
-@mixin font-size($size, $line-height) {
-  font-size: $size + 0.1rem;
-  line-height: $line-height + 0.1rem;
+@mixin font-size($size: 14, $line-height: 17) {
+  font-size: $size * 0.1rem;
+  line-height: $line-height * 0.1rem;
 }

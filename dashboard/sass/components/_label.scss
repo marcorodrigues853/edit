@@ -29,9 +29,8 @@
   }
 
   &__title {
-    font-weight: 400;
-    font-size: 1.1rem;
-    line-height: 1.3rem;
+    @include font-face(400);
+    @include font-size(11, 13);
     color: map-get($map: $black, $key: '20');
   }
 }

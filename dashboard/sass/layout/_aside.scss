@@ -18,11 +18,8 @@
     @include flex-center-vert;
 
     &-text {
-      font-family: var(--font-secondary);
-      font-style: normal;
-      font-weight: 700;
-      font-size: 2rem;
-      line-height: 3rem;
+      @include font-face(700, var(--font-secondary));
+      @include font-size(20, 30);
       text-align: center;
       color: map-get($map: $black, $key: '60');
       margin-left: 1rem;
@@ -57,8 +54,7 @@
   align-content: center;
   gap: 1rem;
 
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+  @include font-size(12, 15);
   text-decoration: none;
   color: map-get($map: $black, $key: '40');
 

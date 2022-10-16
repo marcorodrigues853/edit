@@ -555,21 +555,21 @@ body {
 
 body {
   font-size: 1.4rem;
-  font-family: var(--font-primary), sans-serif; /* inherit */
-  font-weight: 400;
   line-height: 1.7rem;
+  font-weight: 400;
 }
 
 .heading-primary {
   font-size: 2rem;
-  color: #45464e;
-  font-weight: 700;
   line-height: 3rem;
+  font-weight: 700;
+  color: #45464e;
 }
 
 .heading-tertiary {
   color: #8b8d97;
   font-size: 1.4rem;
+  line-height: 1.7rem;
   font-weight: 400;
 }
 
@@ -10924,7 +10924,7 @@ body {
   height: 5.8rem;
   width: 18rem;
   font-size: 2rem;
-  line-height: 24px;
+  line-height: 2.4rem;
   margin: auto;
 }
 .btn--center {
@@ -11051,15 +11051,15 @@ body {
   border-radius: 8px;
 }
 .card__header--title {
-  color: #bec0ca;
   font-size: 1.2rem;
   line-height: 1.5rem;
+  color: #bec0ca;
 }
 .card__header--title-bold {
-  color: #45464e;
   font-size: 1.6rem;
   line-height: 1.9rem;
   font-weight: 500;
+  color: #45464e;
 }
 .card__body {
   display: flex;
@@ -11079,6 +11079,7 @@ body {
 }
 .card__body__box-title {
   font-size: 1.4rem;
+  line-height: 1.7rem;
   color: #bec0ca;
 }
 .card__body__box-title-sm {
@@ -11092,16 +11093,16 @@ body {
   align-items: center;
 }
 .box-number {
+  font-weight: 500;
   font-family: var(--font-secondary);
   font-size: 2rem;
-  color: #45464e;
   line-height: 3rem;
-  font-weight: 500;
+  color: #45464e;
 }
 .box-percentage {
-  margin-left: 0.5rem;
   font-size: 1.2rem;
   line-height: 1.5rem;
+  margin-left: 0.5rem;
   color: #519c66;
 }
 
@@ -11119,6 +11120,7 @@ body {
   width: 100%;
   font-family: inherit;
   font-size: 1.6rem;
+  line-height: 1.7rem;
   color: inherit;
   padding: 0.8rem 1.6rem 0.8rem 1.6rem;
   border-radius: 8px;
@@ -11126,7 +11128,7 @@ body {
 }
 .form__input:focus {
   outline: none;
-  box-shadow: 0 0 0 0.05rem rgba(99, 99, 99, 0.1);
+  box-shadow: 0 0 0 0.05rem rgba(0, 0, 0, 0.1);
 }
 .form__input__icon--end {
   align-self: flex-end;
@@ -11190,7 +11192,7 @@ select {
   position: absolute;
   background: #5570f1;
   width: 1.3rem;
-  height: 3rem;
+  height: 13rem;
   bottom: 0;
   left: 0;
 }
@@ -11205,10 +11207,10 @@ select {
   flex: 1 1 auto;
 }
 .chart__tree-map__list-item {
-  height: 100%;
   font-weight: 600;
   font-size: 1.1rem;
   line-height: 1.3rem;
+  height: 100%;
   color: #000;
   padding: 0.4rem;
   display: flex;
@@ -11285,16 +11287,17 @@ select {
   color: #45464e;
 }
 .product-details__date {
-  color: #a6a8b1;
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-align: right;
+  color: #a6a8b1;
 }
 .product-details__price {
   color: #33343a;
   font-weight: 500;
 }
 .product-details__badge {
+  font-weight: 400;
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-align: right;
@@ -11628,7 +11631,6 @@ main {
 }
 
 .recovery-password {
-  font-size: 1.4rem;
   align-self: end;
   color: #5570f1;
   text-decoration: none;
@@ -11642,6 +11644,7 @@ main {
   color: inherit;
 }
 .signup a {
+  text-decoration: none;
   color: #5570f1;
 }
 
@@ -11793,9 +11796,8 @@ main {
   align-items: center;
 }
 .aside-header__logo-text {
-  font-family: var(--font-secondary);
-  font-style: normal;
   font-weight: 700;
+  font-family: var(--font-secondary);
   font-size: 2rem;
   line-height: 3rem;
   text-align: center;
@@ -11847,17 +11849,17 @@ main {
 }
 
 header {
-  background-color: #ffffff;
-  font-family: var(--font-secondary);
+  width: calc(100% - 296px);
   font-weight: 500;
+  font-family: var(--font-secondary);
   font-size: 2rem;
   line-height: 3rem;
-  color: #45464e;
-  z-index: 1000;
   display: flex;
   align-items: center;
+  background-color: #ffffff;
+  color: #45464e;
+  z-index: 1000;
   justify-content: space-between;
-  width: calc(100% - 296px);
   padding: 1.4rem 2.1rem 1.4rem 2.1rem;
   height: 6rem;
   position: fixed;
@@ -11917,13 +11919,12 @@ header > .btn-mobile-nav {
   display: block;
 }
 .nav__item {
-  height: 5.6rem;
   display: flex;
   align-items: center;
+  height: 5.6rem;
   gap: 1rem;
   border-radius: 12px;
   text-decoration: none;
-  font-size: 1.4rem;
   color: #53545c;
 }
 .nav__item:link,
@@ -11951,6 +11952,7 @@ header > .btn-mobile-nav {
   height: 2.4rem;
   border-radius: 50%;
   font-size: 1.2rem;
+  line-height: 1.7rem;
   padding: 0.2rem;
 }
 .nav__item-active {

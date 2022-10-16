@@ -21,7 +21,6 @@
   // box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.02);   // TODO: review with Cristian
   @include flex-column;
   justify-content: space-between;
-
   min-height: 14.5rem;
   width: 100%;
   background-color: $white;
@@ -48,15 +47,13 @@
       border-radius: 8px;
     }
     &--title {
+      @include font-size(12, 15);
       color: map-get($map: $black, $key: '10');
-      font-size: 1.2rem;
-      line-height: 1.5rem;
     }
     &--title-bold {
+      @include font-size(16, 19);
+      @include font-face(500);
       color: map-get($map: $black, $key: '60');
-      font-size: 1.6rem;
-      line-height: 1.9rem;
-      font-weight: 500;
     }
   }
 
@@ -77,13 +74,11 @@
       width: 50%;
 
       &-title {
-        // TODO: need to check the line-height 1.7
-        font-size: 1.4rem; // TODO:  change typography
+        @include font-size();
         color: map-get($map: $black, $key: '10');
       }
       &-title-sm {
-        font-size: 1.2rem; // TODO:  change typography
-        line-height: 1.5rem;
+        @include font-size(12, 15);
         color: map-get($map: $black, $key: '100');
       }
     }
@@ -94,18 +89,15 @@
   @include flex-center-vert;
 
   &-number {
-    // TODO: need to change font family to font-family: 'Poppins'
-    font-family: var(--font-secondary);
-    font-size: 2rem;
+    @include font-face(500, var(--font-secondary));
+    @include font-size(20, 30);
+
     color: map-get($map: $black, $key: '60');
-    line-height: 3rem;
-    font-weight: 500;
   }
 
   &-percentage {
+    @include font-size(12, 15);
     margin-left: 0.5rem;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
     color: #519c66;
   }
 }

@@ -11,17 +11,18 @@
     border: none;
     width: 100%;
     font-family: inherit;
-    font-size: 1.6rem; // TODO: review 16px typography
+
+    @include font-size(16);
+
     color: inherit;
     padding: 0.8rem 1.6rem 0.8rem 1.6rem;
-    // border-bottom: 3px solid transparent; // add invalid iput bootm bar
     border-radius: 8px;
     background: rgba(239, 241, 249, 0.6);
 
     // flex: 1;
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 0.05rem rgba(99, 99, 99, 0.1);
+      box-shadow: 0 0 0 0.05rem rgba(0, 0, 0, 0.1);
     }
 
     &__icon {

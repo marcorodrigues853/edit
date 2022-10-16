@@ -46,18 +46,17 @@
     color: map-get($map: $black, $key: '60');
   }
   &__date {
-    color: map-get($map: $black, $key: '20');
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    @include font-size(12, 15);
     text-align: right;
+    color: map-get($map: $black, $key: '20');
   }
   &__price {
     color: map-get($map: $black, $key: '80');
-    font-weight: 500;
+    @include font-face(500);
   }
   &__badge {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    @include font-face(400);
+    @include font-size(12, 15);
     text-align: right;
   }
 }
