@@ -10,9 +10,9 @@ header {
 
   z-index: 1000;
 
-  display: flex;
-  align-items: center;
+  @include flex-center-vert;
   justify-content: space-between;
+
   width: calc(100% - (296px / 100 * 100)); // 100% less the menu
 
   padding: 1.4rem 2.1rem 1.4rem 2.1rem;
@@ -23,8 +23,7 @@ header {
 }
 
 .member__area {
-  display: flex;
-  align-items: center;
+  @include flex-center-vert;
   justify-content: space-between;
   gap: 2rem;
 

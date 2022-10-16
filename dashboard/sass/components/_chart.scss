@@ -14,15 +14,13 @@
     padding: 2rem 0.5rem;
     display: flex;
     &__list {
-      display: flex;
-      align-items: center;
+      @include flex-center-vert;
       justify-content: space-around;
       flex-grow: 1;
       gap: 1rem;
 
       &-box {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         align-items: center;
         gap: 1rem;
         color: map-get($map: $black, $key: '10');
@@ -55,8 +53,7 @@
     max-width: 100%;
     display: flex;
     &__list {
-      display: flex;
-      align-items: center;
+      @include flex-center-vert;
       min-height: 20.8rem;
       flex: 1 1 auto;
       &-item {
@@ -90,16 +87,12 @@
 // TODO: need to rename it
 
 .axios-y {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 6rem;
 
-  /* Label 2/Regular */
   font-size: 1.1rem;
   line-height: 1.3rem;
-
-  /* Black/20 */
-  color: #a6a8b1;
+  color: map-get($map: $black, $key: '20');
 }

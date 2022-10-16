@@ -10898,7 +10898,6 @@ body {
 
 .btn {
   border: 1px solid transparent;
-  display: flex;
   gap: 1rem;
   padding: 1.1rem 1.6rem 1.1rem 1.6rem;
   background-color: transparent;
@@ -11041,10 +11040,10 @@ body {
   justify-content: space-between;
 }
 .card__header--icon {
-  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem;
   border-radius: 8px;
 }
 .card__header--title {
@@ -11187,7 +11186,7 @@ select {
   position: absolute;
   background: #5570f1;
   width: 1.3rem;
-  height: 16rem;
+  height: 4rem;
   bottom: 0;
   left: 0;
 }
@@ -11231,18 +11230,16 @@ select {
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 6rem;
-  /* Label 2/Regular */
   font-size: 1.1rem;
   line-height: 1.3rem;
-  /* Black/20 */
   color: #a6a8b1;
 }
 
 .order {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 2rem;
   flex-grow: 1;
   max-height: 65rem;
@@ -11269,8 +11266,8 @@ select {
 }
 .order__list-item__product {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 .order__list-item__product-details {
@@ -11300,10 +11297,10 @@ select {
 }
 
 .no-order-icon {
-  padding: 7rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 7rem;
   margin-bottom: 3rem;
   font-family: var(--font-secondary);
   border-radius: 50%;
@@ -11620,10 +11617,10 @@ main {
 }
 
 .input-login {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   gap: 1rem;
-  flex-direction: column;
-  display: flex;
 }
 
 .recovery-password {
@@ -11659,9 +11656,9 @@ main {
 
 .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   min-height: 20px;
-  justify-content: center;
 }
 
 .col-1 {

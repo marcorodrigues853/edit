@@ -38,15 +38,12 @@
   }
 
   &__header {
-    display: flex;
-    align-items: center;
+    @include flex-center-vert;
     justify-content: space-between;
 
     &--icon {
+      @include flex-center;
       padding: 0.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       border-radius: 8px;
     }
     &--title {
@@ -74,8 +71,7 @@
     }
 
     &__box {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       justify-content: space-between;
       width: 50%;
 
@@ -94,8 +90,7 @@
 }
 
 .box {
-  display: flex;
-  align-items: center;
+  @include flex-center-vert;
 
   &-number {
     // TODO: need to change font family to font-family: 'Poppins'

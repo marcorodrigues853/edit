@@ -1,9 +1,7 @@
 .form {
   &__group {
-    display: flex;
-    align-items: center;
+    @include flex-center-vert;
     justify-content: space-around;
-    // gap: 1rem;
     background: rgba(239, 241, 249, 0.6);
     width: 37.5rem;
     height: 5.2rem;

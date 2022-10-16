@@ -1,8 +1,7 @@
 @import './../base/colors';
 
 .login-body {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
 }
 
 .login-header {
@@ -13,22 +12,18 @@
 }
 
 .main-login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
 }
 
 .login-header {
   padding: 4rem 8.6rem;
-  display: flex;
-  align-items: center;
+  @include flex-center-vert;
 }
 
 .input-login {
+  @include flex-column;
   width: 100%;
   gap: 1rem;
-  flex-direction: column;
-  display: flex;
 }
 
 .recovery-password {

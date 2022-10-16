@@ -2,14 +2,12 @@
 
 .btn {
   border: 1px solid transparent;
-  display: flex;
   gap: 1rem;
   padding: 1.1rem 1.6rem 1.1rem 1.6rem;
   background-color: transparent;
   text-decoration: none;
 
-  display: flex;
-  align-items: center;
+  @include flex-center-vert;
   justify-content: flex-start;
   color: map-get($map: $black, $key: '100');
 

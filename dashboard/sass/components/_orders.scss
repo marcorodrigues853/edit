@@ -1,8 +1,5 @@
 .order {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flex-center-column;
   gap: 2rem;
   flex-grow: 1;
   max-height: 65rem;
@@ -16,8 +13,7 @@
     overflow-y: auto;
     align-self: normal;
 
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     padding: 1rem 0;
     gap: 1.5rem;
 
@@ -31,14 +27,12 @@
       justify-content: space-between;
 
       &__product {
-        display: flex;
+        @include flex-center-vert;
         justify-content: space-between;
-        align-items: center;
         gap: 1rem;
 
         &-details {
-          display: flex;
-          flex-direction: column;
+          @include flex-column;
           justify-content: space-between;
           gap: 1rem;
         }
@@ -69,11 +63,9 @@
 }
 
 .no-order-icon {
-  padding: 7rem;
+  @include flex-center;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 7rem;
   margin-bottom: 3rem;
 
   font-family: var(--font-secondary);

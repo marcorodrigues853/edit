@@ -1,6 +1,5 @@
 .container {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   padding: 12px;
   margin: 7rem 0 32px 0;
 }
@@ -12,10 +11,9 @@
 }
 
 %col {
-  display: flex;
+  @include flex-center-horiz;
   flex-wrap: wrap;
   min-height: 20px;
-  justify-content: center;
 }
 
 $columns: 12;

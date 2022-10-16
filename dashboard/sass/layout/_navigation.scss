@@ -1,6 +1,5 @@
 .nav {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   align-items: flex-start;
 
   // padding: 1.6rem 2rem;
@@ -15,16 +14,14 @@
 
   &__item {
     height: 5.6rem;
-    display: flex;
-    align-items: center;
-
+    @include flex-center-vert;
     gap: 1rem;
     // padding: 1.6rem 2rem 1.6rem 2rem;
 
     border-radius: 12px;
     text-decoration: none;
     font-size: 1.4rem;
-    color: #53545c; //! need to user color: $text-black-50;
+    color: map-get($map: $black, $key: '50');
 
     &:link,
     :visited {
@@ -33,6 +30,7 @@
 
     &:hover {
       background: rgba(84, 111, 242, 0.5);
+
       color: $white;
     }
 
@@ -45,21 +43,21 @@
       margin-left: 2rem;
     }
 
+    // TODO: pass to badg.scss as round
     &-badge {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flex-center;
+
       color: map-get($map: $black, $key: '100');
       background-color: map-get($map: $secondary, $key: '100');
       width: 2.4rem;
       height: 2.4rem;
       border-radius: 50%;
-      font-size: 1.2rem; //? 12px
+      font-size: 1.2rem;
       padding: 0.2rem;
     }
 
     &-active {
-      background: #5570f1;
+      background: map-get($map: $primary, $key: '100');
       color: $white;
     }
     // 100% -225 flex grow;
