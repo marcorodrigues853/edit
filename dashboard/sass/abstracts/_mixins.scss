@@ -1,3 +1,4 @@
+// Flex @mixin
 @mixin flex-column {
   display: flex;
   flex-direction: column;
@@ -22,4 +23,16 @@
 @mixin flex-center-horiz {
   display: flex;
   justify-content: center;
+}
+
+// font face
+@mixin font-face($weight: 400, $family: var(--font-primary)) {
+  weight: $weight;
+  font-family: $family;
+}
+
+// font size
+@mixin font-size($size, $line-height) {
+  font-size: $size + 0.1rem;
+  line-height: $line-height + 0.1rem;
 }

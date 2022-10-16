@@ -10902,10 +10902,14 @@ body {
   padding: 1.1rem 1.6rem 1.1rem 1.6rem;
   background-color: transparent;
   text-decoration: none;
+  transition: scale 0.4s;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   color: #1c1d22;
+}
+.btn:hover {
+  scale: 1.04;
 }
 .btn--round {
   border-radius: 16px;
@@ -11186,7 +11190,7 @@ select {
   position: absolute;
   background: #5570f1;
   width: 1.3rem;
-  height: 4rem;
+  height: 3rem;
   bottom: 0;
   left: 0;
 }
@@ -11779,6 +11783,11 @@ main {
   align-items: flex-start;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .aside {
+    display: none;
+  }
+}
 .aside-header__logo {
   display: flex;
   align-items: center;
@@ -11855,6 +11864,34 @@ header {
   top: 0;
   bottom: 0;
 }
+header > .btn-mobile-nav {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+  header__checkbox {
+    display: none;
+  }
+  header span {
+    margin-right: auto;
+    margin-left: 1rem;
+  }
+  header .btn-mobile-nav {
+    cursor: pointer;
+    fill: inherit;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+  header .btn-mobile-nav:hover {
+    scale: 1.1;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  }
+}
 
 .member__area {
   display: flex;
@@ -11894,7 +11931,7 @@ header {
   transition: background-color 0.4s;
 }
 .nav__item:hover {
-  background: rgba(84, 111, 242, 0.5);
+  background: rgba(84, 111, 242, 0.7);
   color: #ffffff;
 }
 .nav__item:active {

@@ -20,6 +20,40 @@ header {
   position: fixed;
   top: 0;
   bottom: 0;
+
+  & > .btn-mobile-nav {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    & {
+      width: 100%;
+
+      &__checkbox {
+        display: none;
+      }
+
+      & span {
+        margin-right: auto;
+        margin-left: 1rem;
+      }
+
+      & .btn-mobile-nav {
+        cursor: pointer;
+        fill: inherit;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: all 0.3s;
+
+        &:hover {
+          scale: 1.1;
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
 }
 
 .member__area {

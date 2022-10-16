@@ -18,6 +18,7 @@
 //module > module__header + module__body + module__footer
 
 .card {
+  // box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.02);   // TODO: review with Cristian
   @include flex-column;
   justify-content: space-between;
 

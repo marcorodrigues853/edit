@@ -6,10 +6,15 @@
   padding: 1.1rem 1.6rem 1.1rem 1.6rem;
   background-color: transparent;
   text-decoration: none;
+  transition: scale 0.4s;
 
   @include flex-center-vert;
   justify-content: flex-start;
   color: map-get($map: $black, $key: '100');
+
+  &:hover {
+    scale: 1.04;
+  }
 
   //  button shapes
   &--round {
@@ -33,7 +38,6 @@
     width: 18rem;
     font-size: 2rem;
     line-height: 24px;
-
     margin: auto;
   }
 
@@ -51,11 +55,9 @@
   }
   &--grey {
     background-color: rgb(94, 99, 102, 0.1); // TODO: review Cristian
-    //? padding: 11px, 16px, 11px, 16px;
   }
   &--primary {
     background-color: map-get($map: $primary, $key: '100');
     color: $white;
-    //? padding: 11px, 16px, 11px, 16px;
   }
 }
