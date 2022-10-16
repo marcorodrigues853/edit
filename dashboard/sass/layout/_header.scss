@@ -6,8 +6,7 @@ header {
   font-size: 2rem;
   line-height: 3rem;
 
-  // TODO: review the color
-  color: #45464e;
+  color: map-get($map: $black, $key: '60');
 
   z-index: 1000;
 
@@ -28,4 +27,9 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+
+  &-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
 }

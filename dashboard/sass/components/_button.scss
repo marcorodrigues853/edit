@@ -11,18 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  // color: #1c1d22; // TODO: $text-black-100
   color: map-get($map: $black, $key: '100');
-
-  // &,
-  // & a:link,
-  // a:visited {
-  //   text-decoration: none;
-  // }
-  // &a:active,
-  // a:hover {
-  //   text-decoration: dashed;
-  // }
 
   //  button shapes
   &--round {
@@ -40,6 +29,7 @@
   }
 
   &--login {
+    // TODO: need to check this line-height and weight of font
     // padding: 5.8rem 18rem;
     height: 5.8rem;
     width: 18rem;
@@ -66,7 +56,7 @@
     //? padding: 11px, 16px, 11px, 16px;
   }
   &--primary {
-    background-color: #5570f1; // TODO: review Cristian
+    background-color: map-get($map: $primary, $key: '100');
     color: $white;
     //? padding: 11px, 16px, 11px, 16px;
   }

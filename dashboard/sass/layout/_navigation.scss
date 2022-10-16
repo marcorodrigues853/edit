@@ -7,16 +7,14 @@
   gap: 10px;
   width: 23.3rem;
   height: 56rem;
+  margin-bottom: auto;
 
   overflow: hidden;
-
-  //! margin top provisory
   margin-top: 3rem;
   display: block;
 
   &__item {
     height: 5.6rem;
-    // padding: 1rem;
     display: flex;
     align-items: center;
 
@@ -26,22 +24,33 @@
     border-radius: 12px;
     text-decoration: none;
     font-size: 1.4rem;
-
     color: #53545c; //! need to user color: $text-black-50;
+
+    &:link,
+    :visited {
+      transition: background-color 0.4s;
+    }
+
+    &:hover {
+      background: rgba(84, 111, 242, 0.5);
+      color: $white;
+    }
+
+    &:active {
+      background: map-get($map: $primary, $key: '100');
+      color: $white;
+    }
 
     &-image {
       margin-left: 2rem;
     }
-    &-text {
-      // font-size: inherit;
-    }
+
     &-badge {
       display: flex;
       align-items: center;
       justify-content: center;
-
-      color: #1c1d22; //! need to user color: $text-black-100;
-      background-color: #ffcc91; //! secondary/100
+      color: map-get($map: $black, $key: '100');
+      background-color: map-get($map: $secondary, $key: '100');
       width: 2.4rem;
       height: 2.4rem;
       border-radius: 50%;
@@ -53,7 +62,6 @@
       background: #5570f1;
       color: $white;
     }
-
     // 100% -225 flex grow;
   }
 }

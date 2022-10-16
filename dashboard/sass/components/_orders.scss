@@ -8,6 +8,7 @@
   max-height: 65rem;
 
   &__title {
+    margin-bottom: 1rem;
   }
 
   &__list {
@@ -22,7 +23,7 @@
 
     &-item {
       &:not(:last-child) {
-        border-bottom: 1px solid $gray;
+        border-bottom: 1px solid #f1f3f9;
         padding-bottom: 1rem;
       }
 
@@ -46,6 +47,27 @@
   }
 }
 
+.product-details {
+  &__title {
+    color: map-get($map: $black, $key: '60');
+  }
+  &__date {
+    color: map-get($map: $black, $key: '20');
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: right;
+  }
+  &__price {
+    color: map-get($map: $black, $key: '80');
+    font-weight: 500;
+  }
+  &__badge {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: right;
+  }
+}
+
 .no-order-icon {
   padding: 7rem;
 
@@ -54,23 +76,10 @@
   justify-content: center;
   margin-bottom: 3rem;
 
-  // TODO: change font family
   font-family: var(--font-secondary);
-
   border-radius: 50%;
   background-color: $main-background;
   border: 1px solid $gray;
   width: 12rem;
   height: 12rem;
 }
-
-// /* subHeading 3/Medium */
-// font-family: 'Poppins';
-// font-style: normal;
-// font-weight: 500;
-// font-size: 20px;
-// line-height: 30px;
-// /* identical to box height */
-// text-align: center;
-
-// color: #000000;

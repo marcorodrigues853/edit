@@ -26,7 +26,6 @@
             alt="dashboard icon"
           />
           <span class="nav__item-text">Dashboard</span>
-          <div class="nav__item-badge">3</div>
         </a>
 
         <!-- Anchor tests -->
@@ -37,6 +36,7 @@
             alt="dashboard icon"
           />
           <span class="nav__item-text">Orders</span>
+          <div class="nav__item-badge">3</div>
         </a>
 
         <a href="#" class="nav__item">
@@ -107,7 +107,11 @@
       <header class="header">
         <span>Dashboard</span>
         <div class="member__area">
-          <img src="./assets/Iconly/Light/Notification.svg" alt="icon" />
+          <img
+            src="./assets/Iconly/Light/Notification.svg"
+            alt="icon"
+            class="member__area-icon"
+          />
           <img src="./assets/profile.png" alt="Profile image" />
         </div>
       </header>
@@ -115,7 +119,7 @@
         <!-- 1st row -->
         <div class="row">
           <div class="col col-4">
-            <div class="card card">
+            <div class="card">
               <div class="card__header">
                 <img
                   src="./assets/Iconly/Light/graph.svg"
@@ -126,12 +130,19 @@
               </div>
               <div class="card__body">
                 <div class="card__body__box">
-                  <span class="card__body__box-title">All Products</span>
-                  <span class="card__body__box-number">₦0.00</span>
+                  <span class="card__body__box-title">Sales</span>
+
+                  <div class="box">
+                    <span class="box-number">₦0.00</span>
+                    <span class="box-percentage">+0.00%</span>
+                  </div>
                 </div>
                 <div class="card__body__box">
                   <span class="card__body__box-title">Volume</span>
-                  <span class="card__body__box-number">0</span>
+                  <div class="box">
+                    <span class="box-number">0</span>
+                    <span class="box-percentage">+0.00%</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -150,11 +161,17 @@
               <div class="card__body">
                 <div class="card__body__box">
                   <span class="card__body__box-title">Customers</span>
-                  <span class="card__body__box-number">0</span>
+                  <div class="box">
+                    <span class="box-number">0</span>
+                    <span class="box-percentage">+0.00%</span>
+                  </div>
                 </div>
                 <div class="card__body__box">
-                  <span class="card__body__box-title">Volume</span>
-                  <span class="card__body__box-number">0</span>
+                  <span class="card__body__box-title">Active</span>
+                  <div class="box">
+                    <span class="box-number">0</span>
+                    <span class="box-percentage">+0.00%</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -172,15 +189,22 @@
               <div class="card__body">
                 <div class="card__body__box">
                   <span class="card__body__box-title">All orders</span>
-                  <span class="card__body__box-number">0</span>
+                  <div class="box">
+                    <span class="box-number">0</span>
+                  </div>
                 </div>
                 <div class="card__body__box">
                   <span class="card__body__box-title">Pending</span>
-                  <span class="card__body__box-number">0</span>
+                  <div class="box">
+                    <span class="box-number">0</span>
+                  </div>
                 </div>
                 <div class="card__body__box">
                   <span class="card__body__box-title">Completed</span>
-                  <span class="card__body__box-number">0</span>
+                  <div class="box">
+                    <span class="box-number">0</span>
+                    <span class="box-percentage">+0.00%</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -196,7 +220,9 @@
                     <div class="col-6">
                       <div class="card">
                         <div class="card__header">
-                          <span class="card__header--title">Marketing</span>
+                          <span class="card__header--title-bold"
+                            >Marketing</span
+                          >
                           <span class="card__header--title">This week</span>
                         </div>
                         <div class="card__body">
@@ -206,19 +232,19 @@
                                 <span
                                   class="label__circle label--primary-50"
                                 ></span>
-                                <span class="label__title">Purchase</span>
+                                <span class="label__title">Acquisition</span>
                               </div>
                               <div class="label">
                                 <span
                                   class="label__circle label--primary-100"
                                 ></span>
-                                <span class="label__title">Retention</span>
+                                <span class="label__title">Purchase</span>
                               </div>
                               <div class="label">
                                 <span
                                   class="label__circle label--secondary-100"
                                 ></span>
-                                <span class="label__title">Acquisition</span>
+                                <span class="label__title">Retention</span>
                               </div>
                             </div>
 
@@ -263,17 +289,24 @@
                               <span class="card__body__box-title text-white"
                                 >All Products</span
                               >
-                              <span class="card__body__box-number text-white"
-                                >0</span
-                              >
+
+                              <div class="box">
+                                <span class="box-number text-white">0</span>
+                                <span class="box-percentage text-primary-10"
+                                  >+0.00%</span
+                                >
+                              </div>
                             </div>
                             <div class="card__body__box">
                               <span class="card__body__box-title text-white"
                                 >Active</span
                               >
-                              <span class="card__body__box-number text-white"
-                                >0</span
-                              >
+                              <div class="box">
+                                <span class="box-number text-white">0</span>
+                                <span class="box-percentage text-primary-10"
+                                  >+0.00%</span
+                                >
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -291,15 +324,20 @@
                           <div class="card__body">
                             <div class="card__body__box">
                               <span class="card__body__box-title text-warning"
-                                >Abandoned Carts</span
+                                >Abandoned Cart</span
                               >
-                              <span class="card__body__box-number">0</span>
+                              <div class="box">
+                                <span class="box-number">0%</span>
+                                <span class="box-percentage">+0.00%</span>
+                              </div>
                             </div>
                             <div class="card__body__box">
                               <span class="card__body__box-title"
                                 >Customers</span
                               >
-                              <span class="card__body__box-number">0</span>
+                              <div class="box">
+                                <span class="box-number">0</span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -311,7 +349,7 @@
                   <div class="col-12">
                     <div class="card">
                       <div class="card__header">
-                        <span class="card__body__box-title margin-right--1"
+                        <span class="card__header--title-bold margin-right--1"
                           >Summary</span
                         >
                         <select
@@ -323,9 +361,12 @@
                           <option value="other">Amount</option>
                           <option value="">Roi</option>
                         </select>
-                        <span class="card__body__box-title">Last 7 Days</span>
+                        <span class="card__body__box-title-sm"
+                          >Last 7 Days</span
+                        >
                       </div>
 
+                      <!-- Summary chart -->
                       <div class="card__body">
                         <div class="chart__bar">
                           <div class="axios-y">
@@ -387,9 +428,12 @@
               </div>
             </div>
             <div class="col-4">
+              <!-- Recent Order -->
               <div class="card card--start">
                 <div class="card__header">
-                  <div class="order__title">Recent Orders</div>
+                  <div class="order__title card__header--title-bold">
+                    Recent Orders
+                  </div>
                 </div>
                 <div class="card__body">
                   <div class="order">
@@ -398,14 +442,23 @@
                         <div class="order__list-item__product">
                           <img src="./assets/iphone2.png" alt="iphone" />
                           <div class="order__list-item__product-details">
-                            <span>Iphone 14</span>
-                            <span>N730,000.00 × 1</span>
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
                           </div>
                         </div>
                         <div class="order__list-item__product">
                           <div class="order__list-item__product-details">
-                            <span>12 Sept 2022</span>
-                            <span class="badge badge-danger">Pending</span>
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Pending</span
+                            >
                           </div>
                         </div>
                       </div>
@@ -413,14 +466,386 @@
                         <div class="order__list-item__product">
                           <img src="./assets/iphone1.png" alt="iphone" />
                           <div class="order__list-item__product-details">
-                            <span>Iphone 14</span>
-                            <span>N730,000.00 × 1</span>
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
                           </div>
                         </div>
                         <div class="order__list-item__product">
                           <div class="order__list-item__product-details">
-                            <span>12 Sept 2022</span>
-                            <span class="badge badge-success">Completed</span>
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-success"
+                              >Completed</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Pending</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone1.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-success"
+                              >Completed</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone1.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-success"
+                              >Pending</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone1.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-success"
+                              >Completed</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Completed</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Pending</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Pending</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Pending</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Pending</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Pending</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Pending</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Pending</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Pending</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Pending</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__list-item">
+                        <div class="order__list-item__product">
+                          <img src="./assets/iphone2.png" alt="iphone" />
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__title"
+                              >Iphone 14</span
+                            >
+                            <span class="product-details__price"
+                              >N730,000.00 × 1</span
+                            >
+                          </div>
+                        </div>
+                        <div class="order__list-item__product">
+                          <div class="order__list-item__product-details">
+                            <span class="product-details__date"
+                              >12 Sept 2022</span
+                            >
+                            <span
+                              class="product-details__badge badge badge-danger"
+                              >Pending</span
+                            >
                           </div>
                         </div>
                       </div>

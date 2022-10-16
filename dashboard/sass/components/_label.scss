@@ -1,12 +1,17 @@
 .label {
-  // TODO: /* Label 2/Regular */
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-
   margin-top: 1rem;
+
+  &-list {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 
   &__circle {
     width: 0.8rem;
@@ -15,16 +20,13 @@
   }
 
   &--primary-100 {
-    // TODO: /* Primary/100 */
-    background: #5570f1;
+    background: map-get($map: $primary, $key: '100');
   }
   &--primary-50 {
-    // TODO: /* Primary/50 */
-    background: #97a5eb;
+    background: map-get($map: $primary, $key: '50');
   }
   &--secondary-100 {
-    // TODO: /* Secondary/100 */
-    background: #ffcc91;
+    background: map-get($map: $secondary, $key: '100');
     border-radius: 6px;
   }
 
@@ -32,16 +34,6 @@
     font-weight: 400;
     font-size: 1.1rem;
     line-height: 1.3rem;
-
-    // color: #a6a8b1; // TODO:  /* Black/20 */
     color: map-get($map: $black, $key: '20');
   }
-}
-
-.label-list {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
 }

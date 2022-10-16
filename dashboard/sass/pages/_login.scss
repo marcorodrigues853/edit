@@ -34,16 +34,18 @@
 .recovery-password {
   font-size: 1.4rem;
   align-self: end;
-  color: #5570f1; // TODO: need to change to primary
+  color: map-get($map: $primary, $key: '100');
   text-decoration: none;
 }
 
 .signup {
   text-decoration: none;
-  color: #8b8d97;
   color: map-get($map: $black, $key: '30');
 
   &-text {
     color: inherit;
+  }
+  & a {
+    color: map-get($map: $primary, $key: '100');
   }
 }

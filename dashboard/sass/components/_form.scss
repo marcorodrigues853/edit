@@ -18,7 +18,7 @@
     padding: 0.8rem 1.6rem 0.8rem 1.6rem;
     // border-bottom: 3px solid transparent; // add invalid iput bootm bar
     border-radius: 8px;
-    background: rgba(239, 241, 249, 0.6); // TODO: review color
+    background: rgba(239, 241, 249, 0.6);
 
     // flex: 1;
     &:focus {
@@ -32,4 +32,22 @@
       }
     }
   }
+}
+
+select {
+  min-width: 10rem;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+
+  border: none;
+  color: map-get($map: $primary, $key: '100');
+  background: rgba(85, 112, 241, 0.08);
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(85, 112, 241, 0.2);
 }

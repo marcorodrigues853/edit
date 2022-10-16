@@ -14,8 +14,14 @@
     align-items: center;
 
     &-text {
-      font-size: 2rem;
+      font-family: var(--font-secondary);
+      font-style: normal;
       font-weight: 700;
+      font-size: 2rem;
+      line-height: 3rem;
+      text-align: center;
+      color: map-get($map: $black, $key: '60');
+      margin-left: 1rem;
     }
   }
 }

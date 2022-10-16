@@ -1,20 +1,15 @@
-@import './../base/colors';
-
 .card__login {
+  @include flex-center-column;
+
   padding: 4.9rem 3.4rem;
-  display: flex;
-  flex-direction: column;
   gap: 6rem;
-  align-items: center;
   border-radius: 12px;
 
   background-color: $white;
   // min-height: 1rem;
 
   &__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-center-column;
     gap: 1rem;
   }
 }
@@ -23,8 +18,7 @@
 //module > module__header + module__body + module__footer
 
 .card {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   justify-content: space-between;
 
   min-height: 14.5rem;
@@ -39,9 +33,7 @@
   }
 
   &--primary-100 {
-    // TODO: /* Primary/100 */
-
-    background: #5570f1;
+    background: map-get($map: $primary, $key: '100');
     color: $white;
   }
 
@@ -62,6 +54,12 @@
       font-size: 1.2rem;
       line-height: 1.5rem;
     }
+    &--title-bold {
+      color: map-get($map: $black, $key: '60');
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      font-weight: 500;
+    }
   }
 
   &__body {
@@ -74,6 +72,7 @@
       align-items: center;
       flex-grow: 1;
     }
+
     &__box {
       display: flex;
       flex-direction: column;
@@ -81,17 +80,36 @@
       width: 50%;
 
       &-title {
+        // TODO: need to check the line-height 1.7
         font-size: 1.4rem; // TODO:  change typography
         color: map-get($map: $black, $key: '10');
       }
-      &-number {
-        // TODO: need to change font family to font-family: 'Poppins'
-        font-size: 2rem;
-
-        color: map-get($map: $black, $key: '60');
-        line-height: 3rem;
-        font-weight: 500;
+      &-title-sm {
+        font-size: 1.2rem; // TODO:  change typography
+        line-height: 1.5rem;
+        color: map-get($map: $black, $key: '100');
       }
     }
+  }
+}
+
+.box {
+  display: flex;
+  align-items: center;
+
+  &-number {
+    // TODO: need to change font family to font-family: 'Poppins'
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    color: map-get($map: $black, $key: '60');
+    line-height: 3rem;
+    font-weight: 500;
+  }
+
+  &-percentage {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #519c66;
   }
 }

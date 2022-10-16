@@ -1,4 +1,4 @@
-@import 'colors';
+@import '../base/colors';
 
 :root {
   --font-primary: 'Inter'; /* inherit */
@@ -8,7 +8,6 @@
 body {
   // font-size: 62.5%; // 10px per REM
   font-size: 1.4rem; //! need to be review
-
   font-family: var(--font-primary), sans-serif; /* inherit */
   font-weight: 400;
   line-height: 1.7rem;
@@ -18,16 +17,15 @@ body {
 
 .heading-primary {
   font-size: 2rem;
-  // color: #45464e; // TODO: black-60
   color: map-get($map: $black, $key: '60');
   font-weight: 700;
   line-height: 3rem;
 }
-.heading-secondary {
-  // TODO: need to use $primary-text-color X
-}
+
 .heading-tertiary {
   color: map-get($map: $black, $key: '30');
+
+  // TODO:  rever
   font-size: 1.4rem;
   font-weight: 400;
 }

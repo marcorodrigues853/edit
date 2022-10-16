@@ -25,31 +25,24 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        // TODO:  Black/10 */
-        color: #bec0ca;
+        color: map-get($map: $black, $key: '10');
         font-size: 1.1rem;
         line-height: 1.3rem;
       }
 
       &-item {
-        // TODO: need to review the colors
         width: 1.3rem;
         height: 24.1rem;
-
-        background-color: #eef0fa;
+        background-color: $gray-light; // doesn't has in colors'
         border-radius: 50px;
         position: relative;
         overflow: hidden;
 
         &-fill {
-          // TODO: veirfy where i need to put it
           $randomNumber: random(23);
-
           position: absolute;
-          // TODO: Primary/100 */
-          background: #5570f1;
+          background: map-get($map: $primary, $key: '100');
           width: 1.3rem;
-
           height: $randomNumber + rem;
           bottom: 0;
           left: 0;
@@ -65,16 +58,13 @@
       display: flex;
       align-items: center;
       min-height: 20.8rem;
-      // flex-grow: 1;
       flex: 1 1 auto;
       &-item {
-        // width: 100%;
         height: 100%;
-
         font-weight: 600;
-        font-size: 11px;
-        line-height: 13px;
-        color: #000;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        color: $black-full;
         padding: 0.4rem;
 
         display: flex;
@@ -82,41 +72,19 @@
         align-items: flex-end;
         &--lightblue {
           width: 25%;
-          background: #5570f1;
+          background: map-get($map: $primary, $key: '100');
         }
         &--royalblue {
           width: 25%;
-          background: #97a5eb;
+          background: map-get($map: $primary, $key: '60');
         }
         &--violet {
           width: 50%;
-          background: #ffcc91;
+          background: map-get($map: $secondary, $key: '100');
         }
       }
     }
   }
-}
-
-// TODO: selects maybe move to components or forms
-select {
-  min-width: 10rem;
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-
-  border: none;
-  background-color: red;
-  color: map-get($map: $primary, $key: '100');
-  background: rgba(85, 112, 241, 0.08);
-  border-radius: 8px;
-  padding: 0.5rem;
-
-  // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-*:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.2rem rgba(85, 112, 241, 0.2);
 }
 
 // TODO: need to rename it
