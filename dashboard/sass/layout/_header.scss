@@ -1,7 +1,6 @@
 header {
-  // calc // TODO: review with cristian
-  width: calc(100% - (296px / 100 * 100)); // 100% less the menu
-
+  // width: calc(100% - 296px); // 100% less the menu
+  width: 100%;
   @include font-face(500, $font-secondary);
   @include font-size(20, 30);
   @include flex-center-vert;
@@ -14,13 +13,9 @@ header {
 
   padding: 1.4rem 2.1rem 1.4rem 2.1rem;
   height: 6rem;
-  position: fixed;
+  position: sticky;
   top: 0;
   bottom: 0;
-
-  @media screen and (max-width: 768px) {
-    width: calc(100% - 100px);
-  }
 }
 
 .member__area {

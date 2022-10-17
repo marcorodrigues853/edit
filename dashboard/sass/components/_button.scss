@@ -50,10 +50,10 @@
 
   // button  colors
   &--yellow {
-    background-color: rgb(255, 204, 145, 0.2); // TODO: review Cristian
+    background-color: rgb(255, 204, 145, 0.2);
   }
   &--grey {
-    background-color: rgb(94, 99, 102, 0.1); // TODO: review Cristian
+    background-color: rgb(94, 99, 102, 0.1);
   }
   &--primary {
     background-color: map-get($map: $primary, $key: '100');

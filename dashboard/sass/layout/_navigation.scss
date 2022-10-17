@@ -13,6 +13,7 @@
 
   overflow: hidden;
   margin-top: 3rem;
+  overflow-y: auto;
   display: block;
 
   &__item {
@@ -22,9 +23,6 @@
       justify-content: flex-start;
       width: 100%;
 
-      & > img {
-        // margin: 0;
-      }
       & > span {
         display: none;
       }
@@ -36,12 +34,11 @@
     text-decoration: none;
     color: map-get($map: $black, $key: '50');
 
-    &:link,
-    :visited {
-      transition: background-color 0.4s;
+    transition: background-color 0.2s;
+    &:visited {
     }
 
-    &:hover {
+    &:not(.nav__item-active):hover {
       background: rgba(84, 111, 242, 0.7);
       color: $white;
     }

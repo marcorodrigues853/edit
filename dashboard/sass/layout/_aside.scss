@@ -2,6 +2,8 @@
 // @import '../layout/navigation';
 
 .aside {
+  transition: width 0.2s ease-out, padding 0.4s ease-out;
+
   @media screen and (max-width: 768px) {
     width: 120px;
     padding: 1rem;

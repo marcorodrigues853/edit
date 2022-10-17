@@ -1,7 +1,7 @@
 .container {
   @include flex-column;
   padding: 12px;
-  margin: 7rem 0 32px 0;
+  margin: 2rem 0 32px 0;
 }
 
 .row {
@@ -24,7 +24,7 @@ $gap: 1rem;
     @extend %col;
     width: calc(100% / $columns * $i);
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       & {
         width: 100%;
       }
