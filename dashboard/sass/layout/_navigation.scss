@@ -3,16 +3,17 @@
     width: 100%;
   }
   @include flex-column;
-  align-items: flex-start;
+  // align-items: flex-start;
 
   // padding: 1.6rem 2rem;
-  gap: 10px;
+  // gap: 10px;
   width: 23.3rem;
   height: 56rem;
-  margin-bottom: auto;
+  // margin-bottom: auto;
 
-  overflow: hidden;
+  margin-bottom: 2rem;
   margin-top: 3rem;
+  overflow: hidden;
   overflow-y: auto;
   display: block;
 

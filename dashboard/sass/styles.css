@@ -10944,7 +10944,7 @@ select {
   position: absolute;
   background: #5570f1;
   width: 1.3rem;
-  height: 17rem;
+  height: 15rem;
   bottom: 0;
   left: 0;
 }
@@ -11688,13 +11688,11 @@ header {
 .nav {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
   width: 23.3rem;
   height: 56rem;
-  margin-bottom: auto;
-  overflow: hidden;
+  margin-bottom: 2rem;
   margin-top: 3rem;
+  overflow: hidden;
   overflow-y: auto;
   display: block;
 }
