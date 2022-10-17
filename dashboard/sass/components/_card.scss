@@ -89,7 +89,7 @@
   @include flex-center-vert;
 
   &-number {
-    @include font-face(500, var(--font-secondary));
+    @include font-face(500, $font-secondary);
     @include font-size(20, 30);
 
     color: map-get($map: $black, $key: '60');

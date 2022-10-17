@@ -1,4 +1,7 @@
 .nav {
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
   @include flex-column;
   align-items: flex-start;
 
@@ -13,6 +16,19 @@
   display: block;
 
   &__item {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+
+      & > img {
+        // margin: 0;
+      }
+      & > span {
+        display: none;
+      }
+    }
     @include flex-center-vert;
     height: 5.6rem;
     gap: 1rem;

@@ -26,9 +26,9 @@
 }
 
 // font face
-@mixin font-face($weight: 400, $family: var(--font-primary)) {
+@mixin font-face($weight: 400, $family: $font-primary) {
   font-weight: $weight;
-  @if $family== var(--font-primary) {
+  @if $family== $font-primary {
   } @else {
     font-family: $family;
   }
