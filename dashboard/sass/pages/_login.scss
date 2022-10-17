@@ -9,15 +9,12 @@
   width: 100vw;
   height: 7.6rem;
   position: fixed;
+  padding: 4rem 8.6rem;
+  @include flex-center-vert;
 }
 
 .main-login {
   @include flex-center;
-}
-
-.login-header {
-  padding: 4rem 8.6rem;
-  @include flex-center-vert;
 }
 
 .input-login {
