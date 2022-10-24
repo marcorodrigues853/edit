@@ -212,4 +212,4 @@ const string2 = ' tu vais passar';
 
 console.log(string1 + string2)
 
-console.log('Isto é' + 1 + ' String' + ' com '+ 1e3 +' numeros')
+console.log('Isto é ' + 1 + ' String com '+ 1e3 +' numeros')
