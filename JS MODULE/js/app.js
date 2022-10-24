@@ -140,32 +140,76 @@
 // console.log(doubleArray)
 
 
-const months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July');
-console.log(months.length)
+// const months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July');
+// console.log(months.length)
 
-const monthsToString= months.toString();
-console.log(monthsToString)
+// const monthsToString= months.toString();
+// console.log(monthsToString)
 
-const numbers =[1,2,3]
-numbers.pop()
-numbers.shift()
-console.log(numbers)
+// const numbers =[1,2,3]
+// numbers.pop()
+// numbers.shift()
+// console.log(numbers)
 
-const addToArray = [1,2,3,4,5,6]
-addToArray.push(7)
-console.log(addToArray)
-
-
-const addBar = ['batatas', 'morangos']
+// const addToArray = [1,2,3,4,5,6]
+// addToArray.push(7)
+// console.log(addToArray)
 
 
-console.log(addBar.join('/'))
+// const addBar = ['batatas', 'morangos']
 
 
-const joinarray = addBar.concat(addToArray)
-console.log(joinarray)
+// console.log(addBar.join('/'))
 
 
-const person = new Object({
-name: 'Marco', age: 34, country:'Portugal'
-});
+// const joinarray = addBar.concat(addToArray)
+// console.log(joinarray)
+
+
+// const person = new Object({
+//         name: 'Marco',
+//         age: 34,
+//         country:'Portugal'
+// });
+
+// console.table(person);
+
+// console.table(Object.entries(person));
+// console.table(Object.keys(person))
+// console.table(Object.values(person));
+
+
+
+// ////////////////////////////////
+// //? String
+// ////////////////////////////////
+
+// const text = 'Marco Rodrigues';
+// console.log('lenght',text.length)
+// console.log('indexOf', text.indexOf('a'))
+// console.log('replace', text.replace('Marco', 'Javascript é pétaculo'))
+// console.log('onde começa', text.charAt(6))
+// console.log('touppercase', text.toUpperCase())
+// console.log('divide string', text.split(' Rodrigues'))
+
+
+
+// let textfull= 'MArco MArco MArco'
+
+// console.log(textfull.replace('A', 'Z'))
+// // console.log(textfull.replaceAll('A', 'Z'))
+
+
+
+
+// Concatenação
+const numeros = '5'+5
+console.log(numeros)
+
+
+const string1 = 'Isto é um teste';
+const string2 = ' tu vais passar';
+
+console.log(string1 + string2)
+
+console.log('Isto é' + 1 + ' String' + ' com '+ 1e3 +' numeros')
