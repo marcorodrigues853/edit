@@ -164,3 +164,8 @@ console.log(addBar.join('/'))
 
 const joinarray = addBar.concat(addToArray)
 console.log(joinarray)
+
+
+const person = new Object({
+name: 'Marco', age: 34, country:'Portugal'
+});
