@@ -203,13 +203,89 @@
 
 
 // Concatenação
-const numeros = '5'+5
-console.log(numeros)
+// const numeros = '5'+5
+// console.log(numeros)
 
 
-const string1 = 'Isto é um teste';
-const string2 = ' tu vais passar';
+// const string1 = 'Isto é um teste';
+// const string2 = ' tu vais passar';
 
-console.log(string1 + string2)
+// console.log(string1 + string2)
 
-console.log('Isto é ' + 1 + ' String com '+ 1e3 +' numeros')
+// console.log('Isto é ' + 1 + ' String com '+ 1e3 +' numeros')
+
+
+
+// console.log(parseFloat('3.5'))
+
+
+
+// DATES
+
+// const today = new Date()
+// console.log(today)
+
+// const now = Date.now()
+// console.log(now)
+
+
+
+// const february6 =  new Date('2020-02-6')
+// console.log(february6)
+// console.log(february6.getDate())
+// console.log(february6.getFullYear())
+// february6.setMonth(5)
+// console.log(february6)
+
+
+
+// const Person = new Object({
+//   name: 'ze',
+//   year: 1988,
+//   age: (function(){2022-year})
+// });
+// console.log(Person)
+
+
+
+// const name = 'Marco'
+// const lastName = 'Rodrigues'
+
+// const fullName =  function (name, lastName){
+//    return name + ' ' + lastName
+// }
+
+
+// console.log(fullName(name, lastName))
+
+
+// const sum = function (a,b){
+//   return a+b
+// }
+
+
+// console.log(sum(2,2))
+
+
+
+// const sumLong = function (...arguments){
+
+
+// }
+
+
+(function(){
+  console.log('Marco Rodrigues 00000')
+})();
+
+(
+  function(a, b)
+  {
+  console.log(a+b)
+  return a+b;
+}
+)(3,3);
+
+
+
+// CLOSURES
