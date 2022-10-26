@@ -274,18 +274,82 @@
 // }
 
 
-(function(){
-  console.log('Marco Rodrigues 00000')
-})();
+// (function(){
+//   console.log('Marco Rodrigues 00000')
+// })();
 
-(
-  function(a, b)
-  {
-  console.log(a+b)
-  return a+b;
-}
-)(3,3);
-
-
+// (
+//   function(a, b)
+//   {
+//   console.log(a+b);
+//   return a+b;
+// }
+// )(3,3);
 
 // CLOSURES
+
+
+
+// function generateColaborate(name, position){
+
+//   let colaboraterNumber = 0
+
+//   return {
+//     id: colaboraterNumber,
+
+//   }
+// }
+
+
+// function divide(){
+// let divide=1;
+// console.log('divide', divide)
+// ++divide;
+// console.log('divide', divide)
+// return function(number){
+//     // console.log('divide', divide)
+//     console.log(number/divide)
+//      return  number/divide;
+//   }
+
+// }
+// divide();
+// divide();
+// divide();
+// divide();
+// divide()(10);
+// divide()(10);
+
+
+// const b = divide()
+// b(10);
+// b(10)
+// b(10)
+// b(10)
+
+
+
+
+// divide()(10);
+// divide()(10);
+// divide()(10);
+
+
+
+function Book (title, author){
+  this.title=title;
+  this.author=author;
+}
+
+
+// "Os tres mosqueteiros Alecandre Dumas"
+// " Os Maias Eça de Qeuros"
+
+const book1 = new Book("Os tres mosqueteiros", 'Alexandre Dumas')
+const book2 = new Book("Os Maias", 'Eça de Queirós')
+
+console.log(book1, book2);
+
+
+book1.title='O Conde  de Monte Cristo';
+console.log(book1);
