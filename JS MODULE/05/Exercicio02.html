@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio02</title>
+  </head>
+  <style>
+    body {
+      background-color: #022b3a;
+      color: #fff;
+    }
+    textarea {
+      min-height: 200px;
+      display: block;
+    }
+
+    button {
+      cursor: pointer;
+      border: red;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .btn--danger {
+      background-color: red;
+      color: #fff;
+    }
+    .btn--success {
+      background-color: green;
+      color: #fff;
+    }
+  </style>
+  <body></body>
+  <script>
+    // ✅ Cria um ficheiro chamado exercicio02.html;
+    // ✅- Cria uma tag script, para conter o vosso código javascript;
+    // ✅- Adiciona uma textarea com eventos focus e blur. Cada um destes deve fazer console.log das mensagens respectivamente::
+    const newTextArea = document.createElement('textarea')
+    newTextArea.setAttribute('placeholder', 'Write something')
+    newTextArea.addEventListener('focus', () =>
+      console.log('Isto é um evento focus numa textarea'),
+    )
+    newTextArea.addEventListener('blur', () =>
+      console.log('Isto é um evento blur numa textarea'),
+    )
+    document.body.appendChild(newTextArea)
+
+    // - Adiciona 2 botões no html.
+    newButton1 = document.createElement('button')
+    newButton1.setAttribute('class', 'btn--success')
+
+    newButton1.innerText = 'SetInterval'
+
+    newButton2 = document.createElement('button')
+    newButton2.innerText = 'ClearSetInterval'
+    newButton2.classList.add('btn--danger')
+
+    document.body.appendChild(newButton2)
+    document.body.appendChild(newButton1)
+
+    // ✅ Um dos botões ao ser clicado deve iniciar um setInterval que faça console.log da mensagem: “setInterval começou!” O outro botão ao ser clicado deve parar o setInterval iniciado.
+
+    function alertSetInterval() {
+      console.log('setInterval começou!')
+    }
+
+    newButton1.addEventListener('click', startSetInterval)
+    newButton2.addEventListener('click', stopSetInterval)
+
+    var interval = null
+    function startSetInterval() {
+      interval = setInterval(alertSetInterval, 1000)
+    }
+    function stopSetInterval() {
+      clearInterval(interval)
+      console.log('setInterval foi parado!')
+    }
+  </script>
+</html>

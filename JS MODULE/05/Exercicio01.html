@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exercicio01</title>
+  </head>
+  <body></body>
+  <style>
+    body {
+      background-color: #183642;
+      color: #fff;
+    }
+    button {
+      display: block;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0;
+    }
+  </style>
+  <script>
+    console.log('teste')
+
+    // Criar dinamicamente esta estrutura html:
+    const newDomContainer = document.createElement('div')
+    newDomContainer.setAttribute('id', 'container')
+    newDomContainer.classList.add('exercicio')
+    document.body.appendChild(newDomContainer)
+
+    // add span
+    const newSpan = document.createElement('span')
+    newSpan.innerText = 'Isto é o conteúdo da span'
+    newSpan.setAttribute('class', 'exercicio')
+    newDomContainer.appendChild(newSpan)
+
+    // Fazer console.log de todos os elementos com a class exercicio.
+    const getClassExercicio = document.querySelectorAll('.exercicio')
+
+    // or
+    const getClassExercicio2 = document.getElementsByClassName('exercicio')
+
+    console.log('getClassExercicio', getClassExercicio)
+    console.log('getClassExercicio2', getClassExercicio2)
+
+    //  Adiciona dinamicamente um button no início e outra no fim da div.
+    const newButtonStart = document.createElement('button')
+    const newButtonEnd = document.createElement('button')
+
+    newButtonStart.setAttribute('type', 'submit')
+    newButtonStart.innerText = 'Button Start'
+    newButtonEnd.setAttribute('type', 'submit')
+    newButtonEnd.innerText = 'Button End'
+
+    newDomContainer.prepend(newButtonStart)
+    newDomContainer.append(newButtonEnd)
+
+    //  Adiciona o evento click à div. Este evento deve iniciar um setTimeout que faça console.log da mensagem: “o setTimeout começou!”
+    newDomContainer.addEventListener('click', message)
+
+    function message() {
+      setTimeout(() => console.log('o setTimeout começou!'), 500)
+    }
+  </script>
+</html>
