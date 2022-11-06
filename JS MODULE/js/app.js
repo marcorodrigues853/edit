@@ -336,20 +336,35 @@
 
 
 
-function Book (title, author){
-  this.title=title;
-  this.author=author;
-}
+// function Book (title, author){
+//   this.title=title;
+//   this.author=author;
+// }
 
 
 // "Os tres mosqueteiros Alecandre Dumas"
 // " Os Maias Eça de Qeuros"
 
-const book1 = new Book("Os tres mosqueteiros", 'Alexandre Dumas')
-const book2 = new Book("Os Maias", 'Eça de Queirós')
+// const book1 = new Book("Os tres mosqueteiros", 'Alexandre Dumas')
+// const book2 = new Book("Os Maias", 'Eça de Queirós')
 
-console.log(book1, book2);
+// console.log(book1, book2);
 
 
-book1.title='O Conde  de Monte Cristo';
-console.log(book1);
+// book1.title='O Conde  de Monte Cristo';
+// console.log(book1);
+
+
+// console.log('all buttons', document.getElementsByTagName('button'))
+
+// console.log(
+//   'querySelectorAll',
+//   document.getElementsByTagName('.container'),
+// )
+// console.log(
+//   'Faz console.log da div com o id teste.',
+//   document.getElementById('teste'),
+// )
+// - Faz console.log de todos os button.
+// - Faz console.log dos button que fazem parte da div com a class container.
+// - Faz console.log da div com o id teste.

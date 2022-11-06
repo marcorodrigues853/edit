@@ -5,8 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="./js/app.js"></script>
+    <script defer src="./js/app.js"></script>
   </head>
 
-  <body style="background-color: #95a78d"></body>
+  <body style="background-color: #95a78d" onload="alert('on body')">
+    <button type="button">Elementos</button>
+    <p id="teste">Teste</p>
+    <button type="button">Primeiro</button>
+    <div class="container">
+      <h1><time>00:00:00</time></h1>
+      <button id="start" onclick="decrease()">Start</button>
+      <button id="stop">Stop</button>
+      <button id="reset" type="reset" onreset="alert('tudo fodido')">
+        Reset
+      </button>
+
+      <textarea onchange="alert('on change')">teste</textarea>
+      <form action="">
+        <label for="test">Teste</label>
+        <input type="text" name="text" id="text" />
+      </form>
+
+      <p id="onmouseover">on mouse over</p>
+      <p id="onmouseout">on mouse out</p>
+      <label for="password">Password</label>
+
+      <input type="password" id="'password'" name="password" />
+    </div>
+  </body>
+  <script>
+    // console.log(
+    //   '----------------------------------------------------------------',
+    // )
+    // console.log('all buttons', document.getElementsByTagName('button'))
+
+    // console.log('querySelectorAll', document.querySelectorAll('.button'))
+    // console.log(
+    //   'Faz console.log da div com o id teste.',
+    //   document.getElementById('.teste'),
+    // )
+
+    // console.log(
+    //   '----------------------------------------------------------------',
+    // )
+
+    // let newDiv = document.createElement('div')
+    // let newFooter = document.createElement('footer')
+    // document.body.appendChild(newDiv)
+    // newDiv.append('teste')
+
+    // document.body.appendChild('newFooter')
+    // newFooter.append('teste')
+
+    // Exercicio 2
+
+    let time = '00:00:00'
+
+    function decrease() {
+      alert('starting Teste')
+    }
+
+    let form = document.createElement('form')
+    document.body.appendChild(form)
+
+    let submit = document.createElement('button')
+    submit.innerText = 'Submit'
+
+    form.appendChild(submit)
+    submit.setAttribute('type', 'submit')
+
+    let reset = document.createElement('button')
+    reset.innerText = 'reset'
+    form.appendChild(reset)
+    reset.setAttribute('type', 'reset')
+
+    const mouseover = document.getElementById('onmouseover')
+    const onmouseout = document.getElementById('onmouseout')
+    const testeblur = document.getElementById('blur')
+
+    mouseover.addEventListener(
+      'mouseover',
+      (event) => {
+        event.target.style.color = 'red'
+        setTimeout(() => {
+          event.target.style.color = ''
+        }, 500)
+      },
+      false,
+    )
+
+    onmouseout.addEventListener('mouseout', (event) => {
+      event.target.style.color = 'orangered'
+      setTimeout(() => {
+        event.target.style.color = ''
+      }, 500)
+    })
+
+    const password = document.querySelector('input[type="password"]')
+
+    password.addEventListener('blur', (event) => {
+      event.target.style.background = 'red'
+    })
+  </script>
 </html>
