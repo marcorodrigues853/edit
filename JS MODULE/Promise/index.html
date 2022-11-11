@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body></body>
+
+  <script>
+    // console.log('teste')
+    // function soma(a, b) {
+    //   new Promise(resolve, reject)
+    //   resolve(console.log(a, b))
+    //   reject(console.log('errrooouuu'))
+    // }
+
+    // soma(2, 2)
+    // // new Promise((resolve, reject) => {
+    // //   try {
+    // //     const result = soma(2, 2)
+    // //     console.log(result)
+    // //   } catch (error) {
+    // //     console.error(error)
+    // //   }
+    // })
+
+    // var promiseCarrinho = new Promise(function (resolve) {
+    //   setTimeout(function () {
+    //     resolve('carrinho')
+    //   }, 3000)
+    // })
+
+    // async function nomeFuncao() {
+    //   try {
+    //     var result = await promiseCarrinho
+    //     console.log(result)
+    //   } catch (e) {
+    //     console.log(e)
+    //   }
+    // }
+
+    console.log('teste')
+
+    function soma(a, b) {
+      return new Promise(function (resolve) {
+        resolve(a + b)
+      })
+    }
+
+    async function aguarda(a, b) {
+      try {
+        const result = await soma(a, b)
+        console.log(result)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
+    aguarda(2, 5)
+  </script>
+</html>

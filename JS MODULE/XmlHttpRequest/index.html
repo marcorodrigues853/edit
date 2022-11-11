@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX</title>
+  </head>
+  <body></body>
+  <script>
+    // let response
+    // let requestApi = new XMLHttpRequest()
+    // requestApi.open('GET', 'https://restcountries.com/v3.1/alpha/pt')
+    // requestApi.responseType = 'json'
+    // requestApi.send()
+    // requestApi.onreadystatechange = function () {
+    //   console.log(requestApi.response[0].name.common)
+    // }
+
+    // requestApi.onload = function () {
+    //   response = requestApi.response
+    //   console.log('response', response)
+    //   document.body.append(response[0].name.common)
+    // }
+
+    function myPromiseFunction() {
+      return new Promise(function (resolve, reject) {
+        const request = new XMLHttpRequest()
+        request.open(
+          'GET',
+          'https://zoo-animal-api.herokuapp.com/animals/rand/5',
+        )
+        request.responseType = 'json'
+        request.onload = function () {
+          resolve(animalsPrint(request.response))
+        }
+        request.onerror = function () {
+          reject('erro!')
+        }
+        request.send()
+      })
+    }
+
+    function animalsPrint(animals) {
+      animals.forEach((animal) => {
+        let imageDom = document.createElement('img')
+        imageDom.src = animal.image_link
+        imageDom.height = '300'
+
+        let text = document.createElement('p')
+        text.innerText = animal.name
+
+        document.body.appendChild(imageDom)
+        document.body.append(text)
+      })
+    }
+
+    myPromiseFunction()
+  </script>
+</html>
