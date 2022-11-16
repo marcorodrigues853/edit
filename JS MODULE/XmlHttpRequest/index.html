@@ -23,25 +23,72 @@
     //   document.body.append(response[0].name.common)
     // }
 
-    function myPromiseFunction() {
-      return new Promise(function (resolve, reject) {
-        const request = new XMLHttpRequest()
-        request.open(
-          'GET',
-          'https://zoo-animal-api.herokuapp.com/animals/rand/5',
-        )
-        request.responseType = 'json'
-        request.onload = function () {
-          resolve(animalsPrint(request.response))
-        }
-        request.onerror = function () {
-          reject('erro!')
-        }
-        request.send()
+    // function myPromiseFunction() {
+    //   return new Promise(function (resolve, reject) {
+    //     const request = new XMLHttpRequest()
+    //     request.open(
+    //       'GET',
+    //       'https://zoo-animal-api.herokuapp.com/animals/rand/5',
+    //     )
+    //     request.responseType = 'json'
+    //     request.onload = function () {
+    //       resolve(animalsPrint(request.response))
+    //     }
+    //     request.onerror = function () {
+    //       reject('erro!')
+    //     }
+    //     request.send()
+    //   })
+    // }
+
+    // function animalsPrint(animals) {
+    //   animals.forEach((animal) => {
+    //     let imageDom = document.createElement('img')
+    //     imageDom.src = animal.image_link
+    //     imageDom.height = '300'
+
+    //     let text = document.createElement('p')
+    //     text.innerText = animal.name
+
+    //     document.body.appendChild(imageDom)
+    //     document.body.append(text)
+    //   })
+    // }
+
+    // myPromiseFunction()
+
+    // const pardais = fetch('https://zoo-animal-api.herokuapp.com/animals/rand/5')
+    //   .then((response) => {
+    //     response.json
+    //   })
+    //   .then((data) => {
+    //     console.log(data)
+    //   })
+
+    async function getAnimals() {
+      const response = await fetch(
+        'https://zoo-animal-api.herokuapp.com/animals/rand/5',
+      )
+      const data = await response.json()
+      animalsPrint(data)
+
+      const dataMap = data.map((animal) => animal)
+      console.log('dataMap', dataMap)
+
+      const dataFind = data.find((animal) => animal.name.length > 5)
+      console.log('dataFind', dataFind)
+
+      const dataFilter = data.filter((animal) => animal.name.length > 15)
+      console.log('dataFilter', dataFilter)
+
+      const dataReduce = data.reduce((animal) => {
+        data, data, 0
       })
+      console.log('dataReduce', dataReduce)
     }
 
     function animalsPrint(animals) {
+      console.log(animals)
       animals.forEach((animal) => {
         let imageDom = document.createElement('img')
         imageDom.src = animal.image_link
@@ -55,6 +102,6 @@
       })
     }
 
-    myPromiseFunction()
+    getAnimals()
   </script>
 </html>
