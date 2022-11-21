@@ -33,7 +33,6 @@ launchDateDom.innerText = 'launch date'
 
 const genreDom = document.createElement('div')
 genreDom.classList.add('genre')
-genreDom.innerText = 'genre'
 
 const imageBigDom = document.createElement('img')
 imageBigDom.classList.add('imageBig')
@@ -46,9 +45,6 @@ cancelButton.onclick = () => {
   const displayInfo = document.getElementsByClassName('display-info')[0]
 
   displayInfo.style.display = 'none'
-
-  //! apagar depois
-  const nada = 2
 
   gallery.classList.remove('grid-col--2')
   galleryList.classList.remove('grid-col--2')
@@ -126,9 +122,22 @@ function renderImagesCards(animes) {
         modalDom.append(buttonDom)
       })
 
+      const ul = document.getElementsByTagName('ul')[0]
+      if (ul) ul.remove()
+      const ulGenreDom = document.createElement('ul')
+      genreDom.append(ulGenreDom)
+
+      const { genres } = anime
+      genres.forEach((genre) => {
+        console.log(genre)
+        const liGenreDom = document.createElement('li')
+        liGenreDom.textContent = genre.name
+        ulGenreDom.append(liGenreDom)
+      })
+
       nameDom.innerText = anime.title
       ratingDom.innerText = anime.rating
-      launchDateDom.innerText = anime.aired.from
+      launchDateDom.innerText = new Date(anime.aired.from).toDateString()
 
       displayInfo.style.display = 'block'
       gallery.classList.add('grid-col--2')
