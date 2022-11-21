@@ -47,6 +47,9 @@ cancelButton.onclick = () => {
 
   displayInfo.style.display = 'none'
 
+  //! apagar depois
+  const nada = 2
+
   gallery.classList.remove('grid-col--2')
   galleryList.classList.remove('grid-col--2')
   galleryList.classList.add('grid-col--4')
