@@ -85,10 +85,6 @@ function renderImagesCards(animes) {
   const galleryList = document.getElementsByClassName('gallery-list')[0]
 
   animes.forEach((anime, index) => {
-    // console.log('TESTE', anime.images.jpg.image_url)
-    // console.log(galleryList)
-
-    // append inside gallery list
     const galleryItem = document.createElement('div')
     galleryItem.classList.add('gallery-item')
     galleryList.append(galleryItem)
@@ -103,6 +99,8 @@ function renderImagesCards(animes) {
       const displayInfo = document.getElementsByClassName('display-info')[0]
 
       imageBigDom.src = anime.images.jpg.image_url
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+
       imageBigDom.addEventListener('click', () => {
         const modal = document.getElementsByClassName('modal')[0]
         if (modal) modal.remove()
@@ -131,6 +129,7 @@ function renderImagesCards(animes) {
 
       displayInfo.style.display = 'block'
       gallery.classList.add('grid-col--2')
+      galleryList.classList.remove('grid-col--4')
       galleryList.classList.add('grid-col--2')
     })
 
@@ -138,4 +137,81 @@ function renderImagesCards(animes) {
     galleryList.classList.remove('grid-col--2')
     galleryList.classList.add('grid-col--4')
   })
+
+  renderCarrousel(animes)
+}
+
+function renderCarrousel(animes) {
+  const { imageDom, backButton, nextButton, imageRightDom, imageLeftDom } =
+    buildCarrouselDom().data
+
+  let count = 0
+  imageDom.src = animes[count].images.webp.image_url
+  imageLeftDom.src = animes[animes.length - 1].images.webp.image_url
+  imageRightDom.src = animes[count + 1].images.webp.image_url
+
+  nextButton.addEventListener('click', () => {
+    console.log('count', count)
+    count === animes.length - 1 ? (count = 0) : ++count
+    const next = count + 1 > animes.length - 1 ? 0 : count + 1
+    const back = count - 1 < 0 ? animes.length - 1 : count - 1
+
+    console.log('back', back, 'count', count, 'next', next)
+
+    imageDom.src = animes[count].images.webp.image_url
+    imageLeftDom.src = animes[back].images.webp.image_url
+    imageRightDom.src = animes[next].images.webp.image_url
+  })
+
+  backButton.addEventListener('click', () => {
+    count === 0 ? (count = animes.length - 1) : --count
+    imageDom.src = animes[count].images.webp.image_url
+    const next = count + 1 === animes.length ? 0 : count + 1
+    const back = count - 1 <= 0 ? animes.length - 1 : count - 1
+
+    console.log('count', count, 'back', back, 'next', next)
+
+    imageDom.src = animes[count].images.webp.image_url
+    imageLeftDom.src = animes[back].images.webp.image_url
+    imageRightDom.src = animes[next].images.webp.image_url
+  })
+}
+
+function buildCarrouselDom() {
+  const carrouselDom = document.createElement('div')
+  carrouselDom.classList.add('carrousel')
+
+  const divImageDom = document.createElement('div')
+  divImageDom.classList.add('container-image')
+
+  const imageDom = document.createElement('img')
+  imageDom.classList.add('image-carrousel')
+
+  const imageLeftDom = document.createElement('img')
+  imageLeftDom.classList.add('image-small')
+
+  const imageRightDom = document.createElement('img')
+  imageRightDom.classList.add('image-small')
+
+  const backButton = document.createElement('button')
+  backButton.classList.add('button', 'btn--transparent')
+  backButton.textContent = '<'
+
+  const nextButton = document.createElement('button')
+  nextButton.classList.add('button', 'btn--transparent')
+  nextButton.textContent = '>'
+
+  carrouselDom.append(backButton)
+
+  divImageDom.append(imageLeftDom)
+  divImageDom.append(imageDom)
+  divImageDom.append(imageRightDom)
+
+  carrouselDom.append(divImageDom)
+  carrouselDom.append(nextButton)
+  document.body.appendChild(carrouselDom)
+
+  return {
+    data: { imageDom, imageLeftDom, imageRightDom, backButton, nextButton },
+  }
 }
