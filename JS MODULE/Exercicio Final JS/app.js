@@ -227,3 +227,11 @@ function buildCarrouselDom() {
     data: { imageDom, imageLeftDom, imageRightDom, backButton, nextButton },
   }
 }
+
+// render footer
+
+const footerDom = document.createElement('footer')
+const divFooterDom = document.createElement('div')
+
+footerDom.append(divFooterDom)
+document.body.append(footerDom)
