@@ -1,4 +1,12 @@
-console.log('js app ok')
+const titleDom = document.createElement('section')
+
+spanTitleDom = document.createElement('span')
+spanTitleDom.classList.add('title-text')
+spanTitleDom.textContent = 'ANIME SERIES'
+
+titleDom.append(spanTitleDom)
+document.body.appendChild(titleDom)
+
 const sectionGalleryDom = document.createElement('section')
 
 sectionGalleryDom.classList.add('gallery', 'grid')
@@ -19,6 +27,12 @@ sectionGalleryDom.appendChild(galleryListDom)
 sectionGalleryDom.appendChild(displayInfo)
 
 // display inside
+
+const containerDom = document.createElement('div')
+containerDom.classList.add('container-anime')
+const animeInfo = document.createElement('div')
+animeInfo.classList.add('anime-info')
+
 const nameDom = document.createElement('div')
 nameDom.classList.add('name')
 nameDom.innerText = 'Name'
@@ -38,27 +52,25 @@ const imageBigDom = document.createElement('img')
 imageBigDom.classList.add('imageBig')
 
 const cancelButton = document.createElement('button')
-cancelButton.innerText = 'back'
+cancelButton.innerText = 'CLOSE'
 cancelButton.onclick = () => {
   const galleryList = document.getElementsByClassName('gallery-list')[0]
   const gallery = document.getElementsByClassName('gallery')[0]
   const displayInfo = document.getElementsByClassName('display-info')[0]
 
   displayInfo.style.display = 'none'
-
   gallery.classList.remove('grid-col--2')
   galleryList.classList.remove('grid-col--2')
   galleryList.classList.add('grid-col--4')
 }
 
-displayInfo.append(
-  imageBigDom,
-  nameDom,
-  ratingDom,
-  launchDateDom,
-  genreDom,
-  cancelButton,
-)
+animeInfo.append(imageBigDom, nameDom, ratingDom, launchDateDom, genreDom)
+
+containerDom.append(animeInfo)
+containerDom.append(cancelButton)
+
+displayInfo.append(containerDom)
+
 displayInfo.style.display = 'none'
 
 // need to receive info from  API
@@ -80,7 +92,6 @@ async function getAnime() {
 getAnime()
 
 function renderImagesCards(animes) {
-  // console.log(animes)
   const galleryList = document.getElementsByClassName('gallery-list')[0]
 
   animes.forEach((anime, index) => {
@@ -92,15 +103,19 @@ function renderImagesCards(animes) {
     imageDom.src = anime.images.jpg.image_url
     imageDom.classList.add('image-thunbaill')
 
+    const titleDom = document.createElement('div')
+    titleDom.classList.add('title-anime')
+    titleDom.textContent = anime.title
+
     imageDom.addEventListener('click', () => {
       const gallery = document.getElementsByClassName('gallery')[0]
       const galleryList = document.getElementsByClassName('gallery-list')[0]
       const displayInfo = document.getElementsByClassName('display-info')[0]
 
       imageBigDom.src = anime.images.jpg.image_url
-      window.scrollTo({ top: 0, behavior: 'smooth' })
 
       imageBigDom.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
         const modal = document.getElementsByClassName('modal')[0]
         if (modal) modal.remove()
 
@@ -129,7 +144,6 @@ function renderImagesCards(animes) {
 
       const { genres } = anime
       genres.forEach((genre) => {
-        console.log(genre)
         const liGenreDom = document.createElement('li')
         liGenreDom.textContent = genre.name
         ulGenreDom.append(liGenreDom)
@@ -145,7 +159,7 @@ function renderImagesCards(animes) {
       galleryList.classList.add('grid-col--2')
     })
 
-    galleryItem.append(imageDom)
+    galleryItem.append(imageDom, titleDom)
     galleryList.classList.remove('grid-col--2')
     galleryList.classList.add('grid-col--4')
   })
@@ -163,7 +177,6 @@ function renderCarrousel(animes) {
   imageRightDom.src = animes[count + 1].images.webp.image_url
 
   nextButton.addEventListener('click', () => {
-    console.log('count', count)
     count === animes.length - 1 ? (count = 0) : ++count
     const next = count + 1 > animes.length - 1 ? 0 : count + 1
     const back = count - 1 < 0 ? animes.length - 1 : count - 1
@@ -189,10 +202,11 @@ function renderCarrousel(animes) {
   })
 }
 
-function buildCarrouselDom() {
-  const carrouselDom = document.createElement('div')
-  carrouselDom.classList.add('carrousel')
+const carrouselDom = document.createElement('div')
+carrouselDom.classList.add('carrousel')
+document.body.append(carrouselDom)
 
+function buildCarrouselDom() {
   const divImageDom = document.createElement('div')
   divImageDom.classList.add('container-image')
 
@@ -213,15 +227,8 @@ function buildCarrouselDom() {
   nextButton.classList.add('button', 'btn--transparent')
   nextButton.textContent = '>'
 
-  carrouselDom.append(backButton)
-
-  divImageDom.append(imageLeftDom)
-  divImageDom.append(imageDom)
-  divImageDom.append(imageRightDom)
-
-  carrouselDom.append(divImageDom)
-  carrouselDom.append(nextButton)
-  document.body.appendChild(carrouselDom)
+  divImageDom.append(imageLeftDom, imageDom, imageRightDom)
+  carrouselDom.append(backButton, divImageDom, nextButton)
 
   return {
     data: { imageDom, imageLeftDom, imageRightDom, backButton, nextButton },
@@ -230,8 +237,14 @@ function buildCarrouselDom() {
 
 // render footer
 
-const footerDom = document.createElement('footer')
-const divFooterDom = document.createElement('div')
+function buildInfoFooter(name) {
+  const currentYear = new Date().getFullYear()
+  return `${currentYear} © ${name}`
+}
 
-footerDom.append(divFooterDom)
+const footerDom = document.createElement('footer')
+const spanFooterDom = document.createElement('span')
+spanFooterDom.innerText = buildInfoFooter('Marco Rodrigues')
+
+footerDom.append(spanFooterDom)
 document.body.append(footerDom)
